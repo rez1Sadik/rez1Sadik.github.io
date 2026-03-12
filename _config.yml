@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Md Rezwane Sadik"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Md Rezwane Sadik"
 description              : &description "Data Manager"
