@@ -1,143 +1,129 @@
 {% include base_path %}
 
 {% if page.author and site.data.authors[page.author] %}
-  {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.author %}
+  {% assign author = site.data.authors[page.author] %}
+{% else %}
+  {% assign author = site.author %}
 {% endif %}
+
+<style>
+  .hover-lift {
+    transition: transform 0.3s ease !important;
+  }
+  .hover-lift:hover {
+    transform: translateY(-5px) !important;
+    cursor: pointer;
+  }
+</style>
 
 <div itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}"  fetchpriority="high" />
+      <img src="{{ author.avatar }}" class="hover-lift" alt="{{author.name }}" fetchpriority="high" style="border-radius: 22%; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}"  fetchpriority="high" />
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar hover-lift" alt="{{ author.name }}" fetchpriority="high" style="border-radius: 22%; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
     {% endif %}
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{  }}</h3>
+    <h3 class="author__name">{{ }}</h3>
     {% if author.pronouns %}<p class="author__pronouns">{{ author.pronouns }}</p>{% endif %}
-    {% if author.bio %}<p class="author__bio">{{ }}</p>{% endif %}
+    {% if author.bio %}<p class="author__bio">{{  }}</p>{% endif %}
   </div>
 
-
-
   <div style="margin-top: 30px; margin-bottom: 25px; padding: 0 5px;">
-  <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Md Rezwane Sadik</p>
-  <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; justify-items: center; text-align: center; align-items: end;">
+    <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Md Rezwane Sadik</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; justify-items: center; text-align: center; align-items: end;">
       
       {% if author.email %}
-      <a href="mailto:{{ author.email }}" title="rezwane@ieee.org" style="text-decoration: none;">
-        <img src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" width="24" alt="Email">
+      <a href="mailto:{{ author.email }}" title="Email" style="text-decoration: none;">
+        <img src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" class="hover-lift" width="28" alt="Email">
       </a>
       {% endif %}
 
       {% if author.googlescholar %}
       <a href="{{ author.googlescholar }}" title="Google Scholar" style="text-decoration: none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" width="24" alt="Scholar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" class="hover-lift" width="28" alt="Scholar">
       </a>
       {% endif %}
 
       {% if author.github %}
       <a href="https://github.com/{{ author.github }}" title="GitHub" style="text-decoration: none;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="24" alt="GitHub" style="filter: grayscale(20%);">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="hover-lift" width="28" alt="GitHub">
       </a>
       {% endif %}
 
       {% if author.linkedin %}
       <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn" style="text-decoration: none;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" width="24" alt="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="hover-lift" width="28" alt="LinkedIn">
       </a>
       {% endif %}
-
     </div>
   </div>
 
-
-<div style="margin-top: 30px; padding: 0 5px;">
-  <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">AFFILIATIONS</p>
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 05px; justify-items: center; text-align: center; align-items: end;">
-     <img src="{{ base_path }}/images/doe_sd_logo.jpg" style="width: 350px; height: auto; display: block;">
-     <img src="{{ base_path }}/images/usd_logo.png" style="width: 350px; height: auto; display: block;">
-  </div>
-</div>
-
-
-
-<div style="margin-top: 30px; padding: 0 5px; clear: both;">
-  <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">TECHNICAL SKILLS</p>
-
-  <div style="margin-bottom: 20px;">
-    <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Languages</small>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" title="Python" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" title="SQL" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" title="R" style="width: 45px; height: auto;">
-       
-      <img src="https://www.vectorlogo.zone/logos/sas/sas-icon.svg" title="SAS" style="width: 45px; height: auto;">
-      
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" title="MATLAB" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" title="C" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" title="C++" style="width: 45px; height: auto;">
-     
+  <div style="margin-top: 30px; padding: 0 5px;">
+    <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; text-transform: uppercase;">AFFILIATIONS</p>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; justify-items: center; align-items: center;">
+       <img src="{{ base_path }}/images/doe_sd_logo.jpg" class="hover-lift" style="width: 100%; max-width: 240px; height: auto; display: block;">
+       <img src="{{ base_path }}/images/usd_logo.png" class="hover-lift" style="width: 100%; max-width: 240px; height: auto; display: block;">
     </div>
   </div>
 
-  <div style="margin-bottom: 20px;">
-    <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Libraries</small>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" title="Scikit-learn" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" title="PyTorch" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" title="TensorFlow" style="width: 45px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" title="Keras" style="width: 45px; height: auto;">
-      
-      
-    </div>
-  </div>
+  <div style="margin-top: 30px; padding: 0 5px; clear: both;">
+    <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; text-transform: uppercase;">TECHNICAL SKILLS</p>
 
-  <div style="margin-bottom: 10px;">
-    <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Visualization</small>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" title="Power BI" style="width: 50px; height: auto;">
-      <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" title="Tableau" style="width: 50px; height: auto;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" title="VS Code" style="width: 45px; height: auto;">
+    <div style="margin-bottom: 20px;">
+      <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Languages</small>
+      <div style="display: flex; gap: 12px; grid-template-columns: repeat(5, 1fr); flex-wrap: wrap; align-items: center;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="hover-lift" title="Python" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="hover-lift" title="SQL" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" class="hover-lift" title="R" style="width: 45px; height: auto;">
+        <img src="https://www.vectorlogo.zone/logos/sas/sas-icon.svg" class="hover-lift" title="SAS" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" class="hover-lift" title="MATLAB" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" class="hover-lift" title="C" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="hover-lift" title="C++" style="width: 45px; height: auto;">
       </div>
-  </div>
+    </div>
 
+    <div style="margin-bottom: 20px;">
+      <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Libraries</small>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="hover-lift" title="PyTorch" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="hover-lift" title="TensorFlow" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" class="hover-lift" title="Keras" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="hover-lift" title="Scikit-learn" style="width: 45px; height: auto;">
+        
+      </div>
+    </div>
 
-  <div style="margin-bottom: 10px;">
-    <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Others</small>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap; align-items: center;">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" title="Git" style="width: 45px; height: auto;">
-      
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" title="LaTeX" style="width: 45px; height: auto;">
+    <div style="margin-bottom: 15px;">
+      <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">Visualization</small>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="hover-lift" title="Power BI" style="width: 45px; height: auto;">
+        <img src="https://cdn.worldvectorlogo.com/logos/tableau-software.svg" class="hover-lift" title="Tableau" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" class="hover-lift" title="VS Code" style="width: 45px; height: auto;">
+        
+      </div>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+      <small style="color: #666; font-weight: bold; text-transform: uppercase; display: block; margin-bottom: 10px; font-size: 0.75em;">MISC</small>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="hover-lift" title="Git" style="width: 45px; height: auto;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg" class="hover-lift" title="LaTeX" style="width: 45px; height: auto;">
+      </div>
     </div>
   </div>
+
+  <div style="margin-top: 30px; padding: 0 5px;">
+    <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Interests</p>
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; justify-items: center; align-items: center;">
+        <img src="{{ base_path }}/images/adventure.avif" class="hover-lift" title="Adventure" style="width: 50px; height: auto;">
+        <img src="{{ base_path }}/images/pickleball.png" class="hover-lift" title="Pickleball" style="width: 50px; height: auto;">
+        <img src="{{ base_path }}/images/cricket.png" class="hover-lift" title="Cricket" style="width: 50px; height: auto;">
+        <img src="{{ base_path }}/images/tabletennis.png" class="hover-lift" title="Table Tennis" style="width: 50px; height: auto;">
+    </div>
+  </div>
+
 </div>
-
-
-
-
-
-<div style="margin-top: 30px; padding: 0 5px;">
-  <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Interests</p>
-  <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; justify-items: center; text-align: center; align-items: end;">
-    <div>
-      <img src="{{ base_path }}/images/adventure.avif" title ="Adventure" style="width: 60px; height: auto; margin-bottom: 5px;">
-    </div>
-    <div>
-      <img src="{{ base_path }}/images/pickleball.png" title ="Pickleball" style="width: 60px; height: auto; margin-bottom: 5px;">
-    </div>
-
-    <div>
-      <img src="{{ base_path }}/images/cricket.png" title ="Cricket" style="width: 60px; height: auto; margin-bottom: 5px;">
-    </div>
-
-    <div>
-      <img src="{{ base_path }}/images/tabletennis.png" title ="TableTennis" style="width: 60px; height: auto; margin-bottom: 5px;">
-    </div>
-    
-    
-  </div>
-</div>
-

@@ -1,8 +1,8 @@
 ---
-layout: archive
-title: "Publications"
+layout: single
+title: "PUBLICATIONS"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
 {% if site.author.googlescholar %}
@@ -11,26 +11,40 @@ author_profile: true
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
 
 
+<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase;color: #333;">📖 Journal Articles</h2>
+<ol style="line-height: 1.6; margin-bottom: 30px; font-size: .85em; color: #444;">
+  <li style="margin-bottom: 12px;">Islam, T., Sheakh, M.A., <strong>Sadik, M.R.</strong>, Tahosin, M.S., Foysal, M.M.R., Ferdush, J. and Begum, M., (2024). Lexicon and Deep Learning-Based Approaches in Sentiment Analysis on Short Texts. <em>Journal of Computer and Communications</em>, 12(1), pp.11-34. <a href="https://doi.org/10.4236/jcc.2024.121002" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.4236/jcc.2024.121002</a></li>
+  <li style="margin-bottom: 12px;">Roy, U., Tahosin, M., Hassan, M.M., Islam, T., Imtiaz, F., <strong>Sadik, M.R.</strong>, Maleh, Y., Sulaiman, R.B. and Talukder, M.S.H., (2024). Enhancing Bangla Fake News Detection Using Bidirectional Gated Recurrent Units and Deep Learning Techniques. <em>arXiv preprint: arXiv.2404.01345</em></li>
+</ol>
+
+<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px;text-transform: uppercase; color: #333;"> Conference Proceedings</h2>
+<ol style="line-height: 1.6; margin-bottom: 30px; font-size: .85em; color: #444;">
+  <li style="margin-bottom: 12px;"><strong>Sadik, M.R.</strong>, Himu, U.H., Uddin, I.I., Abubakkar, M., Karim, F., & Borna, Y.A., (2025). Aspect-Based Sentiment Analysis of Amazon Product Reviews Using Machine Learning Models and Hybrid Feature Engineering. <em>2025 International Conference on New Trends In Computing Sciences (ICTCS)</em>, Amman, Jordan. <a href="https://doi.org/10.1109/ICTCS65341.2025.10989462" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICTCS65341.2025.10989462</a></li>
+  
+  <li style="margin-bottom: 12px;"><strong>Sadik, M.R.</strong>, Rana, M.M., Akter, L., Islam, R., Rahman, M.H. and Rahman, M.M., (2024). Supervised Machine Learning Approaches to Identify the False and True News from Social Media Data. <em>2024 International Conference on Social and Sustainable Innovations in Technology and Engineering (SASI-ITE)</em>, Tadepalligudem, India, pp. 15-20. <a href="https://doi.org/10.1109/SASI-ITE58663.2024.00011" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/SASI-ITE58663.2024.00011</a></li>
+  
+  <li style="margin-bottom: 12px;"><strong>Sadik, M.R.</strong>, Sony, R.I., Maruf, A.A., Rana, M.M., Islam, M.S., & Fahim, S.H., (2024). Computer Vision Based Bangla Sign Language Recognition Using Transfer Learning. <em>2024 Second International Conference on Data Science and Information System (ICDSIS)</em>, Hassan, India, pp. 1-7. <a href="https://doi.org/10.1109/ICDSIS61070.2024.10594269" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICDSIS61070.2024.10594269</a></li>
+  
+  <li style="margin-bottom: 12px;">Sakib, M., Sheakh, M.A., Tahosin, <strong>Sadik, M.R.</strong>, Islam, M.A., & Akter, L., (2024). Accurate Thyroid Disease Detection with Ensemble Learning Models. <em>2024 4th International Conference on Artificial Intelligence and Signal Processing (AISP)</em>, VIJAYAWADA, India, pp. 1-6. <a href="https://doi.org/10.1109/AISP61711.2024.10870726" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/AISP61711.2024.10870726</a></li>
+  
+  <li style="margin-bottom: 12px;">Ullah, M.A., Mim, A.S., Hasan, M.N. and <strong>Sadik, M.R.</strong>, (2024). Deep Learning Based Forecasting Models of Dengue Outbreak in Bangladesh: Comparative Analysis of LSTM, RNN, and GRU Models Using Multivariate Variables with a Two-Decade Dataset. <em>2024 International Conference on Smart Systems for Applications in Electrical Sciences (ICSSES)</em>, pp. 1-6. <a href="https://doi.org/10.1109/ICSSES62373.2024.10561382" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICSSES62373.2024.10561382</a></li>
+  
+  <li style="margin-bottom: 12px;">Hossain, S., Prova, N.N.I., <strong>Sadik, M.R.</strong> and Al Maruf, A., (2024). Enhancing Crop Management: Ensemble Machine Learning for Real-Time Crop Recommendation System from Sensor Data. <em>2024 International Conference on Smart Systems for Applications in Electrical Sciences (ICSSES)</em>, pp. 1-6. Available at SSRN: <a href="https://ssrn.com/abstract=4817360" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">ssrn.com/abstract=4817360</a></li>
+  
+  <li style="margin-bottom: 12px;">Islam, T., <strong>Sadik, M.R.</strong>, Islam, M.F.R., Mona, T.R., Rahman, T. and Foysal, M.M.R., (2023). Early-Stage Diabetes Risk Prediction Using Supervised Machine Learning Algorithms. <em>2023 2nd International Conference on Futuristic Technologies (INCOFT)</em>, pp. 1-7. <a href="https://doi.org/10.1109/INCOFT60753.2023.10425305" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/INCOFT60753.2023.10425305</a></li>
+  
+  <li style="margin-bottom: 12px;">Sheakh, M.A., Islam, T., <strong>Sadik, M.R.</strong> and Rana, M.M., (2023). Machine Learning Approach Analysis for Early-Stage Liver Disease Prediction in the Context of Bangladesh and India. <em>World Conference on Information Systems for Business Management (ISBM 2023)</em>. Lecture Notes in Networks and Systems, vol. 834, pp. 293-304. Springer, Singapore. <a href="https://doi.org/10.1007/978-981-99-8349-0_23" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1007/978-981-99-8349-0_23</a></li>
+</ol>
+
+<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px;text-transform: uppercase; color: #333;"> Book Chapters</h2>
+<ol style="line-height: 1.6; margin-bottom: 30px; font-size: .85em; color: #444;">
+  <li style="margin-bottom: 12px;">Jackson, S.C., <strong>Sadik, M.R.</strong>, (2023). Implied Communality Deficit and Heroism. In <em>Encyclopedia of Heroism Studies</em>. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-17125-3_303-1" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 978-3-031-17125-3_303-1</a></li>
+</ol>
+
+<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px;text-transform: uppercase; color: #333;"> Under Review</h2>
+<ol style="line-height: 1.6; margin-bottom: 30px; font-size: .85em; color: #444;">
+  
+  </ol>
 
