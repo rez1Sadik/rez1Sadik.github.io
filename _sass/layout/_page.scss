@@ -18,9 +18,14 @@
 
 .page {
   @include breakpoint($large) {
-    @include span(10 of 12 last);
-    @include prefix(0.5 of 12);
-    @include suffix(2 of 12);
+    /* Changed from 10 to 11.5 to take up more horizontal space */
+    @include span(11.5 of 12 last); 
+    
+    /* Reduced from 0.5 to 0.1 to bring text closer to the vertical line */
+    @include prefix(0.1 of 12); 
+    
+    /* Reduced from 2 to 0.4 to stop wasting space on the right */
+    @include suffix(0.4 of 12); 
   }
 
   .page__inner-wrap {

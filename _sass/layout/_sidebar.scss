@@ -18,8 +18,8 @@
   }
 
   @media screen and (min-width: $sidebar-screen-min-width) {
-    height: 100vh;
-    overflow-y: auto;               // Add scrollbar if the sidebar is too long
+    
+                // Add scrollbar if the sidebar is too long
     position: fixed;
     padding-top: $masthead-height;
   }
@@ -332,4 +332,11 @@
 .page {
   width: 90% !important; /* Tells the main content to take up 75% of the screen, leaving 25% for the sidebar */
   padding-right: 20px !important;
+}
+
+/* Kill the old float behavior */
+.sidebar {
+  width: auto !important;
+  float: none !important;
+  position: static !important;
 }

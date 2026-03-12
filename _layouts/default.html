@@ -1,31 +1,36 @@
 ---
 layout: compress
 ---
-
 {% include base_path %}
-
 <!doctype html>
-<html lang="{{ site.locale | slice: 0,2 }}" class="no-js"{% if site.site_theme == "dark" %} data-theme="dark"{% endif %}>
-  <head>
-    {% include head.html %}
-    {% include head/custom.html %}
-  </head>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
 
-  <body>
+<head>
+  {% include head.html %}
+  {% include head/custom.html %}
+</head>
 
-    {% include browser-upgrade.html %}
-    {% include masthead.html %}
+<body style="margin:0; display:flex; flex-direction:column; min-height:100vh; background-color:#ffffff;">
 
-    {{ content }}
+  {% include masthead.html %}
 
-    <div class="page__footer">
-      <footer>
-        {% include footer/custom.html %}
-        {% include footer.html %}
-      </footer>
-    </div>
+  <div id="main" role="main"
+       style="display:flex; flex:1; max-width:1550px; margin:0 auto; width:100%; box-sizing:border-box; align-items: stretch;">
 
-    {% include scripts.html %}
+    <aside class="sidebar"
+           style="flex:0 0 25%; max-width:25%; padding:40px 35px; border-right:1px solid #eeeeee; box-sizing:border-box; background-color:#ffffff;">
+      {% include author-profile.html %}
+    </aside>
 
-  </body>
+    <article class="page"
+             style="flex:1; padding:0px 0px 0px 0px; min-width:0; box-sizing:border-box;">
+      {{ content }}
+    </article>
+
+  </div>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+
+</body>
 </html>

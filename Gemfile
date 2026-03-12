@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
-group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
-end
+# Use the newest, bug-free versions of Jekyll
+gem 'jekyll'
 
-gem 'github-pages'
-gem 'connection_pool', '2.5.0'
+# Core plugins required by your _config.yml
+gem 'jekyll-paginate'
+gem 'jekyll-gist'
+gem 'jekyll-feed'
+gem 'jekyll-sitemap'
+gem 'jekyll-redirect-from'
+gem 'jemoji'
+
+# The missing legacy packages for Ruby 3.4+
+gem 'csv'
+gem 'base64'
+gem 'webrick'
+gem 'bigdecimal'

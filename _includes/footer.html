@@ -1,44 +1,63 @@
-<div style="clear: both; width: 100%; text-align: center; padding: 20px; font-size: 0.9em; color: #666; background-color: #f8f9fa; border-top: 1px solid #eaeaea; margin-top: 50px; position: relative; z-index: 10;">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All rights reserved. 
-  <br>
-  <span style="font-size: 0.85em; color: #888;">Site last updated: {{ site.time | date: "%Y-%m-%d" }}</span>
-  <br>
-  <div style="margin-top: 10px;">
-    {% if site.author.linkedin %}
-      <a href="https://linkedin.com/in/{{ site.author.linkedin }}" style="color: #666; text-decoration: none; margin: 0 10px;"><i class="fab fa-linkedin fa-lg"></i></a>
-    {% endif %}
-    {% if site.author.github %}
-      <a href="https://github.com/{{ site.author.github }}" style="color: #666; text-decoration: none; margin: 0 10px;"><i class="fab fa-github fa-lg"></i></a>
-    {% endif %}
-  </div>
-</div>
-
-<a href="#" class="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></a>
-
 <style>
-  html { 
-    scroll-behavior: smooth; 
+  .site-footer {
+    background-color: #f8f9fa !important;
+    padding: 15px 0 !important; /* Heavily reduced vertical padding */
+    margin-top: 40px; /* Space between content and footer */
+    border-top: 1px solid #e1e4e8;
+    color: #586069;
+    clear: both;
   }
-  
-  .back-to-top { 
-    position: fixed; 
-    bottom: 30px; 
-    right: 30px; 
-    background-color: #4a4a4a; 
-    color: #ffffff !important; 
-    padding: 12px 16px; 
-    border-radius: 8px; 
-    text-decoration: none; 
-    font-size: 1.2em; 
-    z-index: 1000; 
-    opacity: 0.7; 
-    transition: all 0.3s ease; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  .footer-wrapper {
+    max-width: 1400px; /* Increased to allow stats to sit further right */
+    margin: 0 auto;
+    padding: 0 20px;
   }
-  
-  .back-to-top:hover { 
-    opacity: 1; 
-    transform: translateY(-3px); 
-    background-color: #222222;
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Forces them to stay on one line */
+  }
+  .github-stats-right {
+    display: flex;
+    gap: 5px; /* Minimal gap between the two cards */
+    align-items: center;
+  }
+  .github-stats-right img {
+    height: 100px; /* Slightly smaller to save space */
+    width: auto;
+    margin: 0; /* Removes any default image margins */
+    display: block;
+  }
+  .footer-info {
+    font-size: 0.6em;
+    line-height: 1.4;
+    margin: 0;
   }
 </style>
+
+<footer class="site-footer">
+  <div class="footer-wrapper">
+    <div class="footer-bottom">
+      
+      <div class="footer-info">
+        &copy; {{ site.time | date: "%Y" }} <strong>{{ site.author.name }}</strong>
+        <br> 
+        <span style="color: #888;">Data Manager & Researcher</span>
+        <br>
+        <span style="font-size: 0.85em; color: #aaa;">Last Updated: {{ "now" | date: "%B %d, 2026" }}</span>
+      </div>
+
+      <div class="github-stats-right">
+        <img src="https://github-readme-stats.vercel.app/api?username=rez1Sadik&show_icons=true&theme=transparent&hide_border=true&title_color=5594d2&icon_color=5594d2&text_color=444&padding_rect=0" alt="GitHub Stats">
+        
+        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rez1Sadik&layout=compact&theme=transparent&hide_border=true&title_color=5594d2&text_color=444&padding_rect=0" alt="Top Languages">
+
+        <a href="https://mapmyvisitors.com/web/1c35z"  title="Visit tracker"><img src="https://mapmyvisitors.com/map.png?d=6K5GSskg1J92vX0x0XpissZ7OOBPSjAwnv2pi_1dtaA&cl=ffffff" /></a>
+    </div>
+
+      
+    </div>
+    
+  </div>
+</footer>
