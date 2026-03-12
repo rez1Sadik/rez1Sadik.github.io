@@ -1,11 +1,12 @@
 ---
 permalink: /
-title: "Biography"
+title: "Md Rezwane Sadik"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
+<h1 style="margin-top: 0;">Biography</h1>
 
 <div style="text-align: justify; font-size: 1.05em; line-height: 1.6; margin-bottom: 20px;">
 I am a Data Manager at the <a href="#">Department of Education, State of South Dakota</a>, where I leverage data-driven insights to inform educational strategies. I earned my M.Sc. in Business Analytics from the <a href="#">University of South Dakota</a> (CGPA 4.0), an M.B.A. in Marketing from the <a href="#">University of Dhaka</a>, and a B.Sc. in Electrical and Electronics Engineering from the <a href="#">Islamic University of Technology (IUT)</a>, Bangladesh. Prior to my current role, I gained extensive experience in analytical and engineering capacities, including serving as an Adjunct Lecturer at the Beacom School of Business. Our collaborative research has been featured in reputable academic venues, including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.

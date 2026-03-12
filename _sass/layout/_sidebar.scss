@@ -322,3 +322,14 @@
     }
   }
 }
+
+/* Widen the layout to make use of empty space */
+.page__inner-wrap {
+  max-width: 1200px !important; 
+}
+.page {
+  padding-right: 0 !important; 
+}
+.initial-content {
+  max-width: 1200px !important;
+}
