@@ -1,7 +1,7 @@
-<div style="text-align: center; padding: 20px; font-size: 0.9em; color: #666; background-color: #f8f9fa; border-top: 1px solid #eaeaea; margin-top: 50px;">
+<div style="clear: both; width: 100%; text-align: center; padding: 20px; font-size: 0.9em; color: #666; background-color: #f8f9fa; border-top: 1px solid #eaeaea; margin-top: 50px; position: relative; z-index: 10;">
   &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All rights reserved. 
   <br>
-  Site last updated: {{ site.time | date: "%Y-%m-%d" }}
+  <span style="font-size: 0.85em; color: #888;">Site last updated: {{ site.time | date: "%Y-%m-%d" }}</span>
   <br>
   <div style="margin-top: 10px;">
     {% if site.author.linkedin %}
@@ -14,10 +14,31 @@
 </div>
 
 <a href="#" class="back-to-top" title="Back to top"><i class="fas fa-chevron-up"></i></a>
+
 <style>
-  html { scroll-behavior: smooth; }
-  body { display: flex; flex-direction: column; min-height: 100vh; }
-  .initial-content { flex: 1; /* This forces the footer to the bottom of the screen */ }
-  .back-to-top { position: fixed; bottom: 30px; right: 30px; background-color: #4a4a4a; color: #ffffff !important; padding: 12px 16px; border-radius: 8px; text-decoration: none; font-size: 1.2em; z-index: 1000; opacity: 0.7; transition: all 0.3s ease; }
-  .back-to-top:hover { opacity: 1; transform: translateY(-3px); }
+  html { 
+    scroll-behavior: smooth; 
+  }
+  
+  .back-to-top { 
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px; 
+    background-color: #4a4a4a; 
+    color: #ffffff !important; 
+    padding: 12px 16px; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-size: 1.2em; 
+    z-index: 1000; 
+    opacity: 0.7; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .back-to-top:hover { 
+    opacity: 1; 
+    transform: translateY(-3px); 
+    background-color: #222222;
+  }
 </style>
