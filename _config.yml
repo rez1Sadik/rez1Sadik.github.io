@@ -12,7 +12,7 @@ site_theme               : "default"
 title                    : "Md Rezwane Sadik"
 title_separator          : "-"
 name                     : &name "Md Rezwane Sadik"
-description              : &description "Data Manager and Researcher specializing in Machine Learning, Deep Learning, and NLP."
+description              : &description "Data Manager"
 url                      : "https://rez1Sadik.github.io" 
 baseurl                  : "" 
 repository               : "rez1Sadik/rez1Sadik.github.io"
@@ -22,12 +22,12 @@ repository               : "rez1Sadik/rez1Sadik.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile.jpg"
   name             : "Md Rezwane Sadik"
   pronouns         : 
-  bio              : "Data Manager. Research interests include Machine Learning, Deep Learning, Image Processing, Natural Language Processing, and Large Language Models."
+  bio              : "Research interests include Machine Learning, Deep Learning, Image Processing, NLP, LLM"
   location         : "South Dakota, USA"
-  employer         : "Department of Education, State of South Dakota"
+  employer         : "South Dakota Department of Education"
   uri              : 
   email            : "rezwane@ieee.org" 
 
