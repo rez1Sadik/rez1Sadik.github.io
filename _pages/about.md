@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Data Manager at the [Department of Education, State of South Dakota](#). I completed my M.Sc. in Business Analytics from the [University of South Dakota](#) with a 4.0 CGPA. I obtained my M.B.A. from the University of Dhaka and my B.Sc. in Electrical and Electronics Engineering from the [Islamic University of Technology (IUT), Bangladesh](#). Prior to my current role, I worked in several analytical and engineering roles, including serving as an Adjunct Lecturer at the Beacom School of Business. Our research has appeared in venues such as **ICTCS**, **SASI-ITE**, and **ICSSES**.
+I am currently a Data Manager at the [Department of Education, State of South Dakota](#). I completed my M.Sc. in Business Analytics from the [University of South Dakota](#) with a 4.0 CGPA. I obtained my M.B.A. in Marketing from the [IBA, University of Dhaka](#) and my B.Sc. in Electrical and Electronics Engineering from the [Islamic University of Technology (IUT), Bangladesh](#). Prior to my current role, I worked in several analytical and engineering roles, including serving as an Adjunct Lecturer at the Beacom School of Business. Our research has appeared in venues such as **ICTCS**, **SASI-ITE**, and **ICSSES**.
 
 I study machine learning and data analytics from an applied perspective, with a focus on Natural Language Processing, Large Language Models, and Image Processing. I investigate how these models can be deployed efficiently to solve complex problems in sentiment analysis, computer vision, and predictive modeling. As AI continues to scale rapidly, building efficient, accurate, and secure models remains a central challenge for next-generation intelligent systems.
 
@@ -16,7 +16,7 @@ Research Interests:
 * Natural Language Processing (NLP) & Large Language Models (LLMs)
 * Image Processing & Computer Vision
 
-<span style="color:red">I am actively open to collaborative research opportunities and motivated to contribute to impactful AI projects.</span>
+<span style="color:red">I am actively open to collaborative research opportunities and motivated to contribute to impactful healthcare projects.</span>
 
 ## Recent News
 <hr style="margin-top: 0; margin-bottom: 10px;">
