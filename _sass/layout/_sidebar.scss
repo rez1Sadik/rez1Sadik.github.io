@@ -323,13 +323,13 @@
   }
 }
 
-/* Widen the layout to make use of empty space */
+/* Aggressively widen the main content layout */
+.initial-content, 
 .page__inner-wrap {
-  max-width: 1200px !important; 
+  max-width: 100% !important;
 }
+
 .page {
-  padding-right: 0 !important; 
-}
-.initial-content {
-  max-width: 1200px !important;
+  width: 75% !important; /* Tells the main content to take up 75% of the screen, leaving 25% for the sidebar */
+  padding-right: 20px !important;
 }
