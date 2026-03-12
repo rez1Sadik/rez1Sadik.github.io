@@ -152,9 +152,9 @@
   }
 
   img {
-    max-width: 90%;
+    max-width: 400px;
     /* ৫-এর পরিবর্তে ২০-২৫% দিলে এটি দ্বিতীয় ছবির মতো 'Squircle' শেপ নেবে */
-    border-radius: 15%; 
+    border-radius: 14%; 
     /* ছবির নিচে একটি সুন্দর সফট শ্যাডো যোগ করা হয়েছে */
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
     transition: transform 0.3s ease;
