@@ -1,17 +1,33 @@
-<div class="page__footer-follow">
-  <ul class="social-icons">
-    <li><strong>Connect:</strong></li>
-    {% if site.author.linkedin %}
-      <li><a href="https://linkedin.com/in/{{ site.author.linkedin }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="https://github.com/{{ site.author.github }}" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-  </ul>
-</div>
+<a href="#" class="back-to-top" title="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</a>
 
-<div class="page__footer-copyright">
-  &copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. All rights reserved.
-  <br>
-  <span style="font-size: 0.85em; color: #888;">Site last updated: {{ site.time | date: "%Y-%m-%d" }}</span>
-</div>
+<style>
+  /* Enables smooth scrolling for the entire website */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Modern floating button styling */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4a4a4a; /* Dark gray */
+    color: #ffffff !important;
+    padding: 12px 16px;
+    border-radius: 8px; /* Slightly rounded corners */
+    text-decoration: none;
+    font-size: 1.2em;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .back-to-top:hover {
+    background-color: #222222; /* Darker gray on hover */
+    opacity: 1;
+    transform: translateY(-3px); /* Slight lifting animation */
+  }
+</style>
