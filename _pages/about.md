@@ -50,7 +50,7 @@ I am actively seeking collaborative research opportunities and am highly motivat
   }
 </style>
 
-<h2 style="margin-top: 40px; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px;">Timeline & Recent News</h2>
+<h2 style="margin-top: 40px; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px;">Recent News</h2>
 
 <div class="news-scroll-container" style="max-height: 500px; overflow-y: auto; padding-right: 15px; margin-top: 20px;">
   
