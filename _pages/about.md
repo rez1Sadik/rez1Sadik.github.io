@@ -11,7 +11,7 @@ redirect_from:
   /* Base Styles for Desktop */
   .bio-text {
     text-align: justify; 
-    font-size: 1.05em; 
+    font-size: .9em; 
     line-height: 1.6; 
     margin-bottom: 25px; 
     color: #333;
@@ -25,7 +25,7 @@ redirect_from:
   }
   .research-text {
     margin: 0; 
-    font-size: 0.95em; 
+    font-size: 0.9em; 
     color: #444; 
     font-weight: 600; 
     text-transform: uppercase; 
@@ -66,10 +66,10 @@ redirect_from:
   @media (max-width: 768px) {
     .bio-text {
       text-align: left; /* মোবাইলে justify দেখতে খারাপ লাগে, তাই left করা হলো */
-      font-size: 0.95em;
+      font-size: 0.8em;
     }
     .research-text {
-      font-size: 0.85em;
+      font-size: 0.8em;
     }
     .research-text span {
       display: inline-block; /* মোবাইলে পাইপ (|) গুলো সুন্দরভাবে নিচে নামবে */
@@ -97,29 +97,31 @@ redirect_from:
 <h2 style="margin-top: 0; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Biography</h2>
 
 <div class="bio-text">
-  I am a Data Manager at the <a href="https://doe.sd.gov" target="_blank" style="text-decoration: none; color: #5594d2; font-weight: 500;">Department of Education, State of South Dakota</a>, where I leverage data-driven insights to inform educational strategies. I earned my M.Sc. in Business Analytics from the <a href="https://www.usd.edu" target="_blank" style="text-decoration: none; color: #5594d2; font-weight: 500;">University of South Dakota</a> (CGPA 4.0), an M.B.A. in Marketing from the <a href="#" style="text-decoration: none; color: #5594d2; font-weight: 500;">University of Dhaka</a>, and a B.Sc. in Electrical and Electronics Engineering from the <a href="#" style="text-decoration: none; color: #5594d2; font-weight: 500;">Islamic University of Technology (IUT)</a>, Bangladesh. Prior to my current role, I gained extensive experience in analytical and engineering capacities, including serving as an Adjunct Lecturer at the Beacom School of Business. Our collaborative research has been featured in reputable academic venues, including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.
+  I am a Data Manager at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. Bridging the gap between industry and academia, my professional background encompasses extensive data-driven roles and teaching experience, including serving as an Adjunct Lecturer at USD's Beacom School of Business.
 </div>
 
 <div class="bio-text">
-  My research investigates machine learning and deep learning from an applied perspective, focusing on <strong>Natural Language Processing (NLP)</strong>, <strong>Large Language Models (LLMs)</strong>, and <strong>Computer Vision</strong>. I explore model optimization and efficient deployment for real-world challenges like sentiment analysis and predictive healthcare modeling.
+  As an active researcher, my work explores the applied intersections of Machine Learning and Deep Learning with a primary focus on Natural Language Processing (NLP). I am dedicated to developing and optimizing intelligent computational models to address complex, real-world challenges, ranging from sentiment analysis and fake news detection to predictive healthcare modeling. My collaborative research has been featured in reputable peer-reviewed journals and international conferences, including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.
 </div>
+
+
+<p style="color: #d92121; text-align: justify; font-size: .85em; font-weight: 500; margin-bottom: 40px; line-height: 1.5;">
+  I am actively seeking collaborative research opportunities to contribute to the world of data.
+</p>
 
 
 <h2 style="margin-top: 0; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Research Interests</h2>
 
-<div class="research-box">
-  <p class="research-text">
-    <span style="color: #5594d2; font-weight: 800; margin-right: 12px;">FOCUS:</span>
-    Deep Learning <span style="color: #ccc; margin: 0 8px;">|</span> 
-    NLP <span style="color: #ccc; margin: 0 8px;">|</span> 
-    LLM <span style="color: #ccc; margin: 0 8px;">|</span> 
+<div style="margin-bottom: 30px;">
+  <p style="margin: 0; font-size: 0.9em; color: #444; font-weight: 500; letter-spacing: 0.5px;">
+    Deep Learning <span style="color: #aaa; margin: 0 10px;">|</span> 
+    NLP <span style="color: #aaa; margin: 0 10px;">|</span> 
+    LLM <span style="color: #aaa; margin: 0 10px;">|</span> 
     Image Processing
   </p>
 </div>
 
-<p style="color: #d92121; text-align: left; font-size: 1.05em; font-weight: 500; margin-bottom: 40px; line-height: 1.5;">
-  I am actively seeking collaborative research opportunities and am highly motivated to contribute to the world of data.
-</p>
+
 
 
 <h2 style="margin-top: 40px; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Recent News</h2>
@@ -168,33 +170,99 @@ redirect_from:
     </div>
   </div>
 
+    <div class="timeline-item">
+      <div class="timeline-date">Jan 2021</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analys.
+        </ul>
+      </div>
+  </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">Apr 2021</div>
+      <div class="timeline-content">
+        <ul>
+          Graduated with a <strong>M.B.A in Marketing</strong> from the IBA, University of Dhaka, Bangladesh.
+        </ul>
+      </div>
+  </div>
+
+
+
   <div class="timeline-item">
-    <div class="timeline-date">2021</div>
+      <div class="timeline-date">Jan 2021</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analyst.
+        </ul>
+      </div>
+  </div>
+
+  
+  <div class="timeline-item">
+      <div class="timeline-date">Nov 2020</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>iDE</strong>, Bangladesh as Data Analyst Intern.
+        </ul>
+      </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Jan 2019</div>
     <div class="timeline-content">
       <ul>
-        <li>Earned <strong>M.B.A. in Marketing</strong> from the University of Dhaka.</li>
-        <li><strong>Jan-Jul:</strong> Worked as a Business Analyst at Millennium Information Solution Limited.</li>
+        Joined batch 61D of IBA, University of Dhaka, Bangladesh pursuing <strong>M.B.A. in Marketing</strong>.
       </ul>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2015-2019</div>
-    <div class="timeline-content">
-      <ul>
-        <li><strong>2017-2019:</strong> Quality Assurance Engineer at LG, Dhaka.</li>
-        <li><strong>2016-2017:</strong> Assistant Engineer (R&D) at Walton Group.</li>
-      </ul>
-    </div>
+      <div class="timeline-date">May 2017</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>LG</strong>, Bangladesh as Quality Assurance Engineer.
+        </ul>
+      </div>
+  </div>
+
+
+  <div class="timeline-item">
+      <div class="timeline-date">Jan 2016</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>Walton TV R&D</strong>, Bangladesh as Assistant Engineer.
+        </ul>
+      </div>
+  </div>
+
+
+<div class="timeline-item">
+      <div class="timeline-date">Jan 2015</div>
+      <div class="timeline-content">
+        <ul>
+          Joined <strong>Confidence Electic Limited</strong>, Bangladesh as Planning Engineer.
+        </ul>
+      </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2014</div>
-    <div class="timeline-content">
-      <ul>
-        <li>Graduated with a <strong>B.Sc. in Electrical and Electronics Engineering</strong> from the Islamic University of Technology (IUT).</li>
-      </ul>
-    </div>
+      <div class="timeline-date">Nov 2014</div>
+      <div class="timeline-content">
+        <ul>
+          Graduated with a <strong>B.Sc. in EEE</strong> from the Islamic University of Technology, Bangladesh.
+        </ul>
+      </div>
+  </div>
+
+  <div class="timeline-item">
+      <div class="timeline-date">Apr 2014</div>
+      <div class="timeline-content">
+        <ul>
+          Secured <strong>2nd Runner-up</strong> position in the Business Case Study competition at Esonance 2014.
+        </ul>
+      </div>
   </div>
 
 </div>
