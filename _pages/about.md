@@ -123,16 +123,15 @@ redirect_from:
 
 
 
-
 <h2 style="margin-top: 40px; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Recent News</h2>
 
 <div class="news-scroll-container" style="max-height: 500px; overflow-y: auto; padding-right: 15px; margin-top: 20px;">
   
   <div class="timeline-item">
-    <div class="timeline-date">2025</div>
+    <div class="timeline-date">Jan 2025</div>
     <div class="timeline-content">
       <ul>
-        <li>Paper "Aspect-Based Sentiment Analysis of Amazon Product Reviews Using Machine Learning Models and Hybrid Feature Engineering" accepted at <strong>ICTCS 2025</strong>.</li>
+        Paper titled <strong>"Aspect-Based Sentiment Analysis of Amazon Product Reviews"</strong> accepted at the 2025 International Conference on New Trends In Computing Sciences (ICTCS).
       </ul>
     </div>
   </div>
@@ -141,72 +140,110 @@ redirect_from:
     <div class="timeline-date">2024</div>
     <div class="timeline-content">
       <ul>
-        <li>Published journals on Sentiment Analysis in short texts and Bangla Fake News Detection.</li>
-        <li>Published multiple conference papers at <strong>SASI-ITE</strong>, <strong>ICDSIS</strong>, <strong>AISP</strong>, and <strong>ICSSES</strong>.</li>
+        Published journal articles on Sentiment Analysis and Fake News Detection in the <em>Journal of Computer and Communications</em> and <em>arXiv</em>.
+        <br><br>
+        Presented and published multiple papers at international conferences including <strong>SASI-ITE</strong>, <strong>ICDSIS</strong>, <strong>AISP</strong>, and <strong>ICSSES</strong>.
       </ul>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2023</div>
+    <div class="timeline-date">Aug 2023</div>
     <div class="timeline-content">
       <ul>
-        <li><strong>Aug:</strong> Appointed as <strong>Data Manager</strong> at the Department of Education, State of South Dakota.</li>
-        <li><strong>May-Jul:</strong> Worked as a Data Analyst at the Center for Teaching & Learning, USD.</li>
-        <li><strong>Jan-May:</strong> Served as an Adjunct Lecturer at the Beacom School of Business, USD.</li>
-        <li>Recognized by the Beta Gamma Sigma Honor Society for academic excellence.</li>
+        Joined the <strong>Department of Education, State of South Dakota</strong> as Data Manager.
       </ul>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2022</div>
+    <div class="timeline-date">May 2023</div>
     <div class="timeline-content">
       <ul>
-        <li>Completed <strong>M.Sc. in Business Analytics</strong> from the University of South Dakota with a perfect CGPA of 4.0.</li>
-        <li>Received the Leonard E. Arnaud memorial Award & Scholarship for leadership.</li>
-        <li>Served as a Graduate Research Assistant at the Beacom School of Business (Aug 2021-Dec 2022).</li>
+        Joined the <strong>Center for Teaching & Learning, University of South Dakota</strong> as Data Analyst.
       </ul>
     </div>
   </div>
 
-    <div class="timeline-item">
-      <div class="timeline-date">Jan 2021</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analys.
-        </ul>
-      </div>
+  <div class="timeline-item">
+    <div class="timeline-date">Apr 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Published research at <strong>INCOFT</strong> and <strong>ISBM</strong>, and authored a book chapter in the <em>Encyclopedia of Heroism Studies</em>.
+      </ul>
+    </div>
   </div>
-
-    <div class="timeline-item">
-      <div class="timeline-date">Apr 2021</div>
-      <div class="timeline-content">
-        <ul>
-          Graduated with a <strong>M.B.A in Marketing</strong> from the IBA, University of Dhaka, Bangladesh.
-        </ul>
-      </div>
-  </div>
-
-
 
   <div class="timeline-item">
-      <div class="timeline-date">Jan 2021</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analyst.
-        </ul>
-      </div>
+    <div class="timeline-date">Mar 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Inducted into the <strong>Beta Gamma Sigma Honor Society</strong> for academic excellence.
+      </ul>
+    </div>
   </div>
 
-  
   <div class="timeline-item">
-      <div class="timeline-date">Nov 2020</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>iDE</strong>, Bangladesh as Data Analyst Intern.
-        </ul>
-      </div>
+    <div class="timeline-date">Jan 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Started serving as an <strong>Adjunct Lecturer</strong> at the Beacom School of Business, University of South Dakota.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Dec 2022</div>
+    <div class="timeline-content">
+      <ul>
+        Graduated with an <strong>M.Sc. in Business Analytics</strong> (CGPA: 4.0) from the University of South Dakota.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Apr 2022</div>
+    <div class="timeline-content">
+      <ul>
+        Received the <strong>Leonard E. Arnaud memorial Award & Scholarship</strong> for leadership and extracurricular achievements.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Aug 2021</div>
+    <div class="timeline-content">
+      <ul>
+        Joined the Beacom School of Business, University of South Dakota as a <strong>Graduate Research Assistant</strong>.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Apr 2021</div>
+    <div class="timeline-content">
+      <ul>
+        Graduated with a <strong>M.B.A in Marketing</strong> from the IBA, University of Dhaka, Bangladesh.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Jan 2021</div>
+    <div class="timeline-content">
+      <ul>
+        Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analyst.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Nov 2020</div>
+    <div class="timeline-content">
+      <ul>
+        Joined <strong>iDE</strong>, Bangladesh as Data Analyst Intern.
+      </ul>
+    </div>
   </div>
 
   <div class="timeline-item">
@@ -219,50 +256,48 @@ redirect_from:
   </div>
 
   <div class="timeline-item">
-      <div class="timeline-date">May 2017</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>LG</strong>, Bangladesh as Quality Assurance Engineer.
-        </ul>
-      </div>
-  </div>
-
-
-  <div class="timeline-item">
-      <div class="timeline-date">Jan 2016</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>Walton TV R&D</strong>, Bangladesh as Assistant Engineer.
-        </ul>
-      </div>
-  </div>
-
-
-<div class="timeline-item">
-      <div class="timeline-date">Jan 2015</div>
-      <div class="timeline-content">
-        <ul>
-          Joined <strong>Confidence Electic Limited</strong>, Bangladesh as Planning Engineer.
-        </ul>
-      </div>
+    <div class="timeline-date">May 2017</div>
+    <div class="timeline-content">
+      <ul>
+        Joined <strong>LG</strong>, Bangladesh as Quality Assurance Engineer.
+      </ul>
+    </div>
   </div>
 
   <div class="timeline-item">
-      <div class="timeline-date">Nov 2014</div>
-      <div class="timeline-content">
-        <ul>
-          Graduated with a <strong>B.Sc. in EEE</strong> from the Islamic University of Technology, Bangladesh.
-        </ul>
-      </div>
+    <div class="timeline-date">Jan 2016</div>
+    <div class="timeline-content">
+      <ul>
+        Joined <strong>Walton TV R&D</strong>, Bangladesh as Assistant Engineer.
+      </ul>
+    </div>
   </div>
 
   <div class="timeline-item">
-      <div class="timeline-date">Apr 2014</div>
-      <div class="timeline-content">
-        <ul>
-          Secured <strong>2nd Runner-up</strong> position in the Business Case Study competition at Esonance 2014.
-        </ul>
-      </div>
+    <div class="timeline-date">Jan 2015</div>
+    <div class="timeline-content">
+      <ul>
+        Joined <strong>Confidence Electic Limited</strong>, Bangladesh as Planning Engineer.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Nov 2014</div>
+    <div class="timeline-content">
+      <ul>
+        Graduated with a <strong>B.Sc. in EEE</strong> from the Islamic University of Technology, Bangladesh.
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Apr 2014</div>
+    <div class="timeline-content">
+      <ul>
+        Secured <strong>2nd Runner-up</strong> position in the Business Case Study competition at Esonance 2014.
+      </ul>
+    </div>
   </div>
 
 </div>
