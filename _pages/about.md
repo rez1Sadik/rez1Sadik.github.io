@@ -43,7 +43,7 @@ redirect_from:
   .timeline-item {
     display: flex; 
     margin-bottom: 20px; 
-    font-size: 0.85em; 
+    font-size: 0.8em; 
     line-height: 1.6;
   }
   .timeline-date {
@@ -131,22 +131,99 @@ redirect_from:
     <div class="timeline-date">Jan 2025</div>
     <div class="timeline-content">
       <ul>
-        Paper titled <strong>"Aspect-Based Sentiment Analysis of Amazon Product Reviews"</strong> accepted at the 2025 International Conference on New Trends In Computing Sciences (ICTCS).
+        Our paper on aspect-based sentiment analysis of Amazon product reviews using hybrid feature engineering got accepted at the <strong>ICTCS</strong>!
       </ul>
     </div>
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-date">2024</div>
+    <div class="timeline-date">July 2024</div>
     <div class="timeline-content">
       <ul>
-        Published journal articles on Sentiment Analysis and Fake News Detection in the <em>Journal of Computer and Communications</em> and <em>arXiv</em>.
-        <br><br>
-        Presented and published multiple papers at international conferences including <strong>SASI-ITE</strong>, <strong>ICDSIS</strong>, <strong>AISP</strong>, and <strong>ICSSES</strong>.
+        Our paper on accurate thyroid disease detection with ensemble learning models got accepted at the <strong>AISP</strong>!
       </ul>
     </div>
   </div>
 
+  <div class="timeline-item">
+    <div class="timeline-date">Apr 2024</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on deep learning-based forecasting models for dengue outbreaks in Bangladesh got accepted at the <strong>ICSSES</strong>!
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Mar 2024</div>
+    <div class="timeline-content">
+      <ul>
+        Our article on enhancing Bangla fake news detection using BiGRU and deep learning techniques got accepted at the <strong>ICPS</strong>!
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Feb 2024</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on computer vision-based Bangla sign language recognition using transfer learning got accepted at the <strong>ICDSIS</strong>!
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Jan 2024</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on enhancing crop management using ensemble machine learning for real-time recommendation systems got accepted at <strong>ICSSES</strong>!
+      </ul>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Dec 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Our article on lexicon and deep learning-based approaches for sentiment analysis on short texts got accepted at the <strong>Journal of Computer and Communications</strong>!
+      </ul>
+    </div>
+  </div>
+
+
+
+
+  <div class="timeline-item">
+    <div class="timeline-date">Nov 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on supervised machine learning approaches to identify fake and true news from social media data got accepted at the <strong>SASI-ITE</strong>!
+      </ul>
+    </div>
+  </div>
+
+
+
+<div class="timeline-item">
+    <div class="timeline-date">Oct 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on machine learning approaches for early-stage liver disease prediction got published in the <strong>ISBM</strong>!
+      </ul>
+    </div>
+  </div>
+
+
+<div class="timeline-item">
+    <div class="timeline-date">Sep 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Our paper on early-stage diabetes risk prediction using supervised machine learning algorithms got accepted at the <strong>INCOFT</strong>!
+      </ul>
+    </div>
+  </div>
+
+  
   <div class="timeline-item">
     <div class="timeline-date">Aug 2023</div>
     <div class="timeline-content">
@@ -156,6 +233,15 @@ redirect_from:
     </div>
   </div>
 
+  <div class="timeline-item">
+    <div class="timeline-date">Jul 2023</div>
+    <div class="timeline-content">
+      <ul>
+        Our book chapter on implied communality deficit and heroism got accepted at the <strong>Encyclopedia of Heroism Studies</strong> by Springer!
+      </ul>
+  </div>
+
+  </div>
   <div class="timeline-item">
     <div class="timeline-date">May 2023</div>
     <div class="timeline-content">
@@ -219,6 +305,7 @@ redirect_from:
     </div>
   </div>
 
+  {% comment %}
   <div class="timeline-item">
     <div class="timeline-date">Apr 2021</div>
     <div class="timeline-content">
@@ -299,5 +386,6 @@ redirect_from:
       </ul>
     </div>
   </div>
+  {% endcomment %}
 
 </div>
