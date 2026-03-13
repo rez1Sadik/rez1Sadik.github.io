@@ -22,7 +22,7 @@ repository               : "rez1Sadik/rez1Sadik.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.jpeg"
+  avatar           : "profile.jpg"
   name             : "Md Rezwane Sadik"
   pronouns         : 
   bio              : "Research interests include Machine Learning, Deep Learning, Image Processing, NLP, LLM"
