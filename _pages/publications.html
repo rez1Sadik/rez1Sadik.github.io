@@ -5,83 +5,296 @@ permalink: /publications/
 author_profile: false
 ---
 
-
-
-
 <style>
-  /* Mobile Responsive CSS for Publications */
-  .pub-list {
-    line-height: 1.6; 
-    margin-bottom: 30px; 
-    font-size: .9em; 
-    color: #444;
-    padding-left: 25px; /* স্ট্যান্ডার্ড প্যাডিং */
+  /* Minimalistic & Academic CSS */
+  .pub-section-title {
+    margin-top: 45px; border-bottom: 1px solid #eaeaea; padding-bottom: 8px; 
+    text-transform: uppercase; color: #2c3e50; font-size: 1.15em; font-weight: 600;
   }
+
+  .pub-list { line-height: 1.6; margin-bottom: 40px; font-size: 0.95em; color: #3b3b3b; padding-left: 20px; }
+  .pub-list li { margin-bottom: 30px; padding-left: 5px; }
   
-  .pub-list li {
-    margin-bottom: 15px;
-    text-align: left;
-    word-wrap: break-word; /* লম্বা শব্দ ভেঙে নিচে নামাবে */
-    overflow-wrap: break-word;
+  .paper-title { 
+    font-weight: 600; color: #2c3e50; display: block; 
+    margin: 0 0 4px 0; font-size: 1.05em; line-height: 1.3;
   }
 
-  .pub-list a {
-    word-break: break-word; /* মোবাইলে DOI লিংকগুলো স্ক্রিনের বাইরে যাবে না */
+  .authors-list { 
+    font-size: 0.88em; color: #666; margin-bottom: 10px; 
   }
 
-  /* স্ক্রিন ছোট হলে (Mobile View) ফন্ট এবং গ্যাপ অটোমেটিক কমে যাবে */
-  @media (max-width: 768px) {
-    .pub-list {
-      font-size: 0.95em; 
-      padding-left: 18px; 
-    }
-    h2 {
-      font-size: 1.2em;
-    }
+  /* Interactive Toolbar - Order: Venue > Publisher > Abstract > DOI > Citation */
+  .paper-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 8px; }
+
+  .meta-btn, .impact-badge {
+    cursor: pointer; font-size: 0.75em; font-weight: 600; border-radius: 4px;
+    padding: 2px 8px; transition: all 0.2s ease; display: inline-block;
   }
+
+  /* Venue Style (Dark) */
+  .venue-btn { background-color: #2c3e50; color: #fff; border: 1px solid #2c3e50; }
+  
+  /* Publisher Badge Style (Light Gray/Blue) */
+  .impact-badge { 
+    background-color: #f0f4f8; color: #2c3e50; border: 1px solid #dce4ec; 
+    cursor: default; /* Not clickable like buttons */
+  }
+
+  /* DOI Style */
+  .doi-btn { background-color: #f0f7ff; color: #3172b4; border: 1px solid #d0e3f7; }
+  
+  /* Abstract Style */
+  .abstract-btn { background-color: #fff; color: #555; border: 1px solid #ccc; text-transform: uppercase; }
+  .abstract-btn:hover { background-color: #2c3e50; color: #fff; }
+
+  /* Info Boxes */
+  .info-box {
+    display: none; margin-top: 12px; font-size: 0.9em; padding: 12px 18px;
+    background: #fcfcfc; border-left: 3px solid #2c3e50; border-radius: 0 4px 4px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02); text-align: justify;
+  }
+  .info-box p { margin: 0 0 12px 0; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .badge-wrap { display: inline-block; vertical-align: middle; margin-top: -2px; }
+
+  @media (max-width: 768px) { .pub-list { font-size: 0.9em; } }
 </style>
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap" style="margin-bottom: 20px; font-size: .9em;">
-    You can also find my articles on <a href="{{site.author.googlescholar}}" style="color: #5594d2; font-weight: bold; text-decoration: none;">my Google Scholar profile</a>.
+  <div style="margin-bottom: 25px; font-size: 0.9em; color: #555; background-color: #fcfcfc; padding: 10px 15px; border-left: 3px solid #3172b4; border-radius: 3px;">
+    <i>Note:</i> Find more on <a href="{{site.author.googlescholar}}" style="color:#3172b4; text-decoration:none; font-weight:bold;">my Google Scholar profile</a>.
   </div>
 {% endif %}
 
 {% include base_path %}
 
-
-<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase; color: #333;"> Journal Articles</h2>
+<h2 class="pub-section-title">Journal Articles</h2>
 <ol class="pub-list">
-  <li>Islam, T., Sheakh, M.A., <strong>Sadik, M.R.</strong>, Tahosin, M.S., Foysal, M.M.R., Ferdush, J. and Begum, M., (2024). Lexicon and Deep Learning-Based Approaches in Sentiment Analysis on Short Texts. <em>Journal of Computer and Communications</em>, 12(1), pp.11-34. <a href="https://doi.org/10.4236/jcc.2024.121002" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.4236/jcc.2024.121002</a></li>
-  <li>Roy, U., Tahosin, M., Hassan, M.M., Islam, T., Imtiaz, F., <strong>Sadik, M.R.</strong>, Maleh, Y., Sulaiman, R.B. and Talukder, M.S.H., (2024). Enhancing Bangla Fake News Detection Using Bidirectional Gated Recurrent Units and Deep Learning Techniques. <em>arXiv preprint: arXiv.2404.01345</em></li>
+  
+  <li>
+    <span class="paper-title">Lexicon and Deep Learning-Based Approaches in Sentiment Analysis on Short Texts.</span>
+    <div class="authors-list">Islam, T., Sheakh, M.A., <strong>Sadik, M.R.</strong>, Tahosin, M.S., Foysal, M.M.R., Ferdush, J. and Begum, M., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="Journal of Computer and Communications, 12(1), pp.11-34.">JCC '24</span>
+      <span class="impact-badge">Peer-Reviewed</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.4236/jcc.2024.121002">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.4236/jcc.2024.121002" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>Social media is an essential component of our personal and professional lives. We use it extensively to share various things, including our opinions on daily topics and feelings about different subjects. This sharing of posts provides insights into someone’s current emotions.</p>
+      <p>In artificial intelligence (AI) and deep learning (DL), researchers emphasize opinion mining and analysis of sentiment, particularly on social media platforms such as Twitter (currently known as X), which has a global user base. This research work revolves explicitly around a comparison between two popular approaches: Lexicon-based and Deep learning-based Approaches.</p>
+      <p>To conduct this study, this study has used a Twitter dataset called sentiment140, which contains over 1.5 million data points. The primary focus was the Long Short-Term Memory (LSTM) deep learning sequence model. In the beginning, we used particular techniques to preprocess the data. The dataset is divided into training and test data. We evaluated the performance of our model using the test data.</p>
+      <p>Simultaneously, we have applied the lexicon-based approach to the same test data and recorded the outputs. Finally, we compared the two approaches by creating confusion matrices based on their respective outputs. This allows us to assess their precision, recall, and F1-Score, enabling us to determine which approach yields better accuracy. This research achieved <strong>98% model accuracy</strong> for deep learning algorithms and <strong>95% model accuracy</strong> for the lexicon-based approach.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Enhancing Bangla Fake News Detection Using Bidirectional Gated Recurrent Units and Deep Learning Techniques.</span>
+    <div class="authors-list">Roy, U., Tahosin, M., Hassan, M.M., Islam, T., Imtiaz, F., <strong>Sadik, M.R.</strong>, Maleh, Y., Sulaiman, R.B. and Talukder, M.S.H., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="Association for Computing Machinery (ACM), Vol 14, pp.01-10.">ACM '24</span>
+      <span class="impact-badge">ACM Digital Library</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://dl.acm.org/doi/10.1145/3659677.3659703">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1145/3659677.3659703" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>The rise of fake news has made the need for effective detection methods, including in languages other than English, increasingly important. The study aims to address the challenges of Bangla which is considered a less important language.</p>
+      <p>To this end, a complete dataset containing about 50,000 news items is proposed. Several deep learning models have been tested on this dataset, including the bidirectional gated recurrent unit (GRU), the long short-term memory (LSTM), the 1D convolutional neural network (CNN), and hybrid architectures.</p>
+      <p>For this research, we assessed the efficacy of the model utilizing a range of useful measures, including recall, precision, F1 score, and accuracy. This was done by employing a big application.</p>
+      <p>We carry out comprehensive trials to show the effectiveness of these models in identifying bogus news in Bangla, with the <strong>Bidirectional GRU model having a stunning accuracy of 99.16%</strong>. Our analysis highlights the importance of dataset balance and the need for continual improvement efforts to a substantial degree. This study makes a major contribution to the creation of Bangla fake news detecting systems with limited resources, thereby setting the stage for future improvements in the detection process.</p>
+    </div>
+  </li>
 </ol>
 
-<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase; color: #333;"> Conference Proceedings</h2>
+<h2 class="pub-section-title">Conference Proceedings</h2>
 <ol class="pub-list">
-  <li><strong>Sadik, M.R.</strong>, Himu, U.H., Uddin, I.I., Abubakkar, M., Karim, F., & Borna, Y.A., (2025). Aspect-Based Sentiment Analysis of Amazon Product Reviews Using Machine Learning Models and Hybrid Feature Engineering. <em>2025 International Conference on New Trends In Computing Sciences (ICTCS)</em>, Amman, Jordan. <a href="https://doi.org/10.1109/ICTCS65341.2025.10989462" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICTCS65341.2025.10989462</a></li>
   
-  <li><strong>Sadik, M.R.</strong>, Rana, M.M., Akter, L., Islam, R., Rahman, M.H. and Rahman, M.M., (2024). Supervised Machine Learning Approaches to Identify the False and True News from Social Media Data. <em>2024 International Conference on Social and Sustainable Innovations in Technology and Engineering (SASI-ITE)</em>, Tadepalligudem, India, pp. 15-20. <a href="https://doi.org/10.1109/SASI-ITE58663.2024.00011" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/SASI-ITE58663.2024.00011</a></li>
-  
-  <li><strong>Sadik, M.R.</strong>, Sony, R.I., Maruf, A.A., Rana, M.M., Islam, M.S., & Fahim, S.H., (2024). Computer Vision Based Bangla Sign Language Recognition Using Transfer Learning. <em>2024 Second International Conference on Data Science and Information System (ICDSIS)</em>, Hassan, India, pp. 1-7. <a href="https://doi.org/10.1109/ICDSIS61070.2024.10594269" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICDSIS61070.2024.10594269</a></li>
-  
-  <li>Sakib, M., Sheakh, M.A., Tahosin, <strong>Sadik, M.R.</strong>, Islam, M.A., & Akter, L., (2024). Accurate Thyroid Disease Detection with Ensemble Learning Models. <em>2024 4th International Conference on Artificial Intelligence and Signal Processing (AISP)</em>, VIJAYAWADA, India, pp. 1-6. <a href="https://doi.org/10.1109/AISP61711.2024.10870726" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/AISP61711.2024.10870726</a></li>
-  
-  <li>Ullah, M.A., Mim, A.S., Hasan, M.N. and <strong>Sadik, M.R.</strong>, (2024). Deep Learning Based Forecasting Models of Dengue Outbreak in Bangladesh: Comparative Analysis of LSTM, RNN, and GRU Models Using Multivariate Variables with a Two-Decade Dataset. <em>2024 International Conference on Smart Systems for Applications in Electrical Sciences (ICSSES)</em>, pp. 1-6. <a href="https://doi.org/10.1109/ICSSES62373.2024.10561382" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/ICSSES62373.2024.10561382</a></li>
-  
-  <li>Hossain, S., Prova, N.N.I., <strong>Sadik, M.R.</strong> and Al Maruf, A., (2024). Enhancing Crop Management: Ensemble Machine Learning for Real-Time Crop Recommendation System from Sensor Data. <em>2024 International Conference on Smart Systems for Applications in Electrical Sciences (ICSSES)</em>, pp. 1-6. Available at SSRN: <a href="https://ssrn.com/abstract=4817360" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">ssrn.com/abstract=4817360</a></li>
-  
-  <li>Islam, T., <strong>Sadik, M.R.</strong>, Islam, M.F.R., Mona, T.R., Rahman, T. and Foysal, M.M.R., (2023). Early-Stage Diabetes Risk Prediction Using Supervised Machine Learning Algorithms. <em>2023 2nd International Conference on Futuristic Technologies (INCOFT)</em>, pp. 1-7. <a href="https://doi.org/10.1109/INCOFT60753.2023.10425305" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1109/INCOFT60753.2023.10425305</a></li>
-  
-  <li>Sheakh, M.A., Islam, T., <strong>Sadik, M.R.</strong> and Rana, M.M., (2023). Machine Learning Approach Analysis for Early-Stage Liver Disease Prediction in the Context of Bangladesh and India. <em>World Conference on Information Systems for Business Management (ISBM 2023)</em>. Lecture Notes in Networks and Systems, vol. 834, pp. 293-304. Springer, Singapore. <a href="https://doi.org/10.1007/978-981-99-8349-0_23" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 10.1007/978-981-99-8349-0_23</a></li>
+  <li>
+    <span class="paper-title">Aspect-Based Sentiment Analysis of Amazon Product Reviews Using Machine Learning Models and Hybrid Feature Engineering.</span>
+    <div class="authors-list"><strong>Sadik, M.R.</strong>, Himu, U.H., Uddin, I.I., Abubakkar, M., Karim, F., & Borna, Y.A., (2025).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2025 International Conference on New Trends In Computing Sciences, Amman, Jordan.">ICTCS '25</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/ICTCS65341.2025.10989462">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/ICTCS65341.2025.10989462" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>While sentiment analysis is a popular and significant research trend, aspect-based sentiment analysis (ABSA) requires more focus from researchers. The customer reviews of headphones and Bluetooth devices on Amazon are the main subject of this study.</p>
+      <p>The results of evaluating these methods showed that, with an accuracy of <strong>91%</strong>, SVM with hybrid word n-gram (1,3) produced the best outcomes. The research dataset exhibits imbalance, which is addressed by using the Matthews Correlation Coefficient (MCC) as an additional performance metric. This results in a score of <strong>0.77</strong>.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Supervised Machine Learning Approaches to Identify the False and True News from Social Media Data.</span>
+    <div class="authors-list"><strong>Sadik, M.R.</strong>, Rana, M.M., Akter, L., Islam, R., Rahman, M.H. and Rahman, M.M., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2024 Intl. Conf. on Social and Sustainable Innovations in Technology and Engineering, India.">SASI-ITE '24</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/SASI-ITE58663.2024.00011">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/SASI-ITE58663.2024.00011" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>The increasing number of online communities and social platforms like Twitter and Facebook has facilitated a level of information sharing never before seen in human history. After evaluating the model, the research found that the decision tree achieved the best <strong>99.84% model accuracy</strong> from this study.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Computer Vision Based Bangla Sign Language Recognition Using Transfer Learning.</span>
+    <div class="authors-list"><strong>Sadik, M.R.</strong>, Sony, R.I., Maruf, A.A., Rana, M.M., Islam, M.S., & Fahim, S.H., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2024 Second Intl. Conf. on Data Science and Information System, India.">ICDSIS '24</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/ICDSIS61070.2024.10594269">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/ICDSIS61070.2024.10594269" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>Our study aims to develop a method for image-based Bengali sign language detection. We constructed two independent CNN models, InceptionV3 and Xception. Remarkably, the Inception V3 model achieved an accuracy of 97%, while the <strong>Xception model surpassed expectations with an accuracy of 99.50%</strong>.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Accurate Thyroid Disease Detection with Ensemble Learning Models.</span>
+    <div class="authors-list">Sakib, M., Sheakh, M.A., Tahosin, <strong>Sadik, M.R.</strong>, Islam, M.A., & Akter, L., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2024 4th Intl. Conf. on Artificial Intelligence and Signal Processing, India.">AISP '24</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/AISP61711.2024.10870726">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/AISP61711.2024.10870726" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>Thyroid disease prevents a person's thyroid gland from producing enough hormones. The ensemble of the Decision Tree + Logistic Regression model has proven its effectiveness by achieving <strong>99.90% accuracy</strong>.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Deep Learning Based Forecasting Models of Dengue Outbreak in Bangladesh.</span>
+    <div class="authors-list">Ullah, M.A., Mim, A.S., Hasan, M.N. and <strong>Sadik, M.R.</strong>, (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2024 Intl. Conf. on Smart Systems for Applications in Electrical Sciences.">ICSSES '24</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/ICSSES62373.2024.10561382">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/ICSSES62373.2024.10561382" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>In 2023, Bangladesh experienced its most severe dengue outbreak. <strong>LSTM exhibited the highest accuracy at 87.98%</strong>, surpassing GRU at 79.81%, while RNN trailed at 57.18%.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Enhancing Crop Management: Ensemble Machine Learning for Real-Time Crop Recommendation.</span>
+    <div class="authors-list">Hossain, S., Prova, N.N.I., <strong>Sadik, M.R.</strong> and Al Maruf, A., (2024).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2024 Intl. Conf. on Smart Systems for Applications in Electrical Sciences.">ICSSES '24</span>
+      <span class="impact-badge">SSRN</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://ssrn.com/abstract=4817360">DOI</span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>We provide a revolutionary Crop Recommendation System utilizing real-time monitoring of soil conditions. We were able to classify crops with an astounding <strong>99% accuracy rate</strong>.</p>
+    </div>
+  </li> 
+
+  <li>
+    <span class="paper-title">Early-Stage Diabetes Risk Prediction Using Supervised Machine Learning Algorithms.</span>
+    <div class="authors-list">Islam, T., <strong>Sadik, M.R.</strong>, Islam, M.F.R., Mona, T.R., Rahman, T. and Foysal, M.M.R., (2023).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="2023 2nd Intl. Conf. on Futuristic Technologies.">INCOFT '23</span>
+      <span class="impact-badge">IEEE Xplore</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1109/INCOFT60753.2023.10425305">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1109/INCOFT60753.2023.10425305" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>Using real data from diabetic patients in Bangladesh, <strong>Random Forest achieved the highest 98% accuracy</strong> out of 5 different machine learning algorithms.</p>
+    </div>
+  </li>
+
+  <li>
+    <span class="paper-title">Machine Learning Approach Analysis for Early-Stage Liver Disease Prediction.</span>
+    <div class="authors-list">Sheakh, M.A., Islam, T., <strong>Sadik, M.R.</strong> and Rana, M.M., (2023).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="World Conf. on Information Systems for Business Management.">ISBM '23</span>
+      <span class="impact-badge">Springer LNNS</span>
+      <span class="meta-btn abstract-btn">Abstract</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1007/978-981-99-8349-0_23">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1007/978-981-99-8349-0_23" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p>The <strong>Extra Tree algorithm was found to be the most effective way for early liver problem detection with 99% accuracy</strong>. Undersampling and SMOTE were used to reduce class imbalance.</p>
+    </div>
+  </li>
 </ol>
 
-<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase; color: #333;"> Book Chapters</h2>
+<h2 class="pub-section-title">Book Chapters</h2>
 <ol class="pub-list">
-  <li>Jackson, S.C., <strong>Sadik, M.R.</strong>, (2023). Implied Communality Deficit and Heroism. In <em>Encyclopedia of Heroism Studies</em>. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-17125-3_303-1" target="_blank" style="color: #5594d2; text-decoration: none; font-weight: bold;">DOI: 978-3-031-17125-3_303-1</a></li>
+  <li>
+    <span class="paper-title">Implied Communality Deficit and Heroism.</span>
+    <div class="authors-list">Jackson, S.C., <strong>Sadik, M.R.</strong>, (2023).</div>
+    <div class="paper-meta">
+      <span class="meta-btn venue-btn" data-full="Encyclopedia of Heroism Studies, Springer Cham.">Heroism Studies '23</span>
+      <span class="impact-badge">Springer</span>
+      <span class="meta-btn abstract-btn">Definition</span>
+      <span class="meta-btn doi-btn" data-full="https://doi.org/10.1007/978-3-031-17125-3_303-1">DOI</span>
+      <span class="badge-wrap"><span class="__dimensions_badge_embed__" data-doi="10.1007/978-3-031-17125-3_303-1" data-hide-zero-citations="false" data-style="small_rectangle"></span></span>
+    </div>
+    <div class="info-box details-info"></div>
+    <div class="info-box abstract-info">
+      <p><strong>Implied Communality Deficit:</strong> The perceived lack of stereotypically feminine characteristics that can occur when females exhibit stereotypically masculine traits or behavior. Often results in negativity directed towards the female.</p>
+    </div>
+  </li>
 </ol>
 
-<h2 style="margin-top: 30px; border-bottom: 1px solid #eee; padding-bottom: 10px; text-transform: uppercase; color: #333;"> Under Review</h2>
-<ol class="pub-list">
-  Work in progress! 
-</ol>
+<h2 class="pub-section-title">Under Review</h2>
+<ul class="pub-list" style="list-style-type: square; padding-left: 20px;">
+  <li><span style="color: #666; font-style: italic;">Work in progress!</span></li>
+</ul>
 
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.meta-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const parent = this.closest('li');
+        const detailsBox = parent.querySelector('.details-info');
+        const abstractBox = parent.querySelector('.abstract-info');
+        
+        if (this.classList.contains('venue-btn') || this.classList.contains('doi-btn')) {
+          abstractBox.style.display = "none";
+          const isDoi = this.classList.contains('doi-btn');
+          const content = this.getAttribute('data-full');
+          const html = isDoi ? `<strong>Link:</strong> <a href="${content}" target="_blank" style="color:#3172b4; text-decoration:underline;">${content}</a>` : `<strong>Venue:</strong> ${content}`;
+          
+          if (detailsBox.style.display === "block" && detailsBox.innerHTML === html) {
+            detailsBox.style.display = "none";
+          } else {
+            detailsBox.innerHTML = html;
+            detailsBox.style.display = "block";
+          }
+        } 
+        else if (this.classList.contains('abstract-btn')) {
+          detailsBox.style.display = "none";
+          abstractBox.style.display = (abstractBox.style.display === "block") ? "none" : "block";
+        }
+      });
+    });
+  });
+</script>
