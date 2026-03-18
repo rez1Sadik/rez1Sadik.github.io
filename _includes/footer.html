@@ -1,66 +1,96 @@
 <style>
+  /* Ultra-Compact Academic Footer */
   .site-footer {
-    background-color: #f8f9fa !important;
-    padding: 15px 0 !important; /* Heavily reduced vertical padding */
-    margin-top: 40px; /* Space between content and footer */
-    border-top: 1px solid #e1e4e8;
-    color: #586069;
-    clear: both;
+    background-color: #fcfcfc !important; 
+    padding: 15px 0 !important; /* Cut vertical padding in half */
+    margin-top: 40px; 
+    border-top: 1px solid #eaeaea;
+    color: #555;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+  
   .footer-wrapper {
-    max-width: 1400px; /* Increased to allow stats to sit further right */
+    max-width: 1000px; 
     margin: 0 auto;
     padding: 0 20px;
-  }
-  .footer-bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap; /* Forces them to stay on one line */
   }
-  .github-stats-right {
-    display: flex;
-    gap: 5px; /* Minimal gap between the two cards */
+
+  .footer-left, .footer-center, .footer-right { flex: 1; }
+
+  /* Left Side: Micro-Typography */
+  .footer-left {
+    text-align: left;
+    font-size: 0.75em; /* Shrunk font size */
+    line-height: 1.4;  /* Tightened line height */
+  }
+  .footer-meta {
+    color: #8fa0b3;
+  }
+
+  /* Center Side: Subtle Quote */
+  .footer-center {
+    text-align: center;
+  }
+  .footer-quote {
+    font-style: italic;
+    font-size: 0.8em; /* Shrunk font size */
+    color: #999; /* Made slightly lighter to fade into the background more */
+    letter-spacing: 0.05em;
+  }
+
+  /* Right Side: Compact Top Button */
+  .footer-right {
+    text-align: right;
+  }
+  .back-to-top {
+    display: inline-flex;
     align-items: center;
+    gap: 6px;
+    font-size: 0.75em; /* Shrunk font size */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #8fa0b3;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
   }
-  .github-stats-right img {
-    height: 100px; /* Slightly smaller to save space */
-    width: auto;
-    margin: 0; /* Removes any default image margins */
-    display: block;
+  .back-to-top:hover {
+    color: #2c3e50; 
+    transform: translateY(-2px); /* Tighter hover animation */
   }
-  .footer-info {
-    font-size: 0.6em;
-    line-height: 1.4;
-    margin: 0;
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .footer-wrapper {
+      flex-direction: column;
+      gap: 10px; /* Tighter gap for mobile */
+    }
+    .footer-left, .footer-center, .footer-right {
+      text-align: center;
+    }
   }
 </style>
 
 <footer class="site-footer">
   <div class="footer-wrapper">
-    <div class="footer-bottom">
-      
-      <div class="footer-info">
-        &copy; {{ site.time | date: "%Y" }} <strong>{{ site.author.name }}</strong>
-        <br> 
-        <span style="color: #888;">Data Manager & Researcher</span>
-        <br>
-        <span style="font-size: 0.8em; color: #aaa;">Last Updated: {{ "now" | date: "%B %d, 2026" }}</span>
-      </div>
-
-       {% comment %}
     
-      <div class="github-stats-right">
-        <img src="https://github-readme-stats.vercel.app/api?username=rez1Sadik&show_icons=true&theme=transparent&hide_border=true&title_color=5594d2&icon_color=5594d2&text_color=444&padding_rect=0" alt="GitHub Stats">
-        
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=rez1Sadik&layout=compact&theme=transparent&hide_border=true&title_color=5594d2&text_color=444&padding_rect=0" alt="Top Languages">
-
-        <a href='https://mapmyvisitors.com/web/1c36g'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=m&d=lSzZfQ2Us9dYiV01T5GNc3tqK2pNAxQX2Mbse6RV51s'/></a>
-      </div>
-      {% endcomment %}
-
-      
+    <div class="footer-left">
+      &copy; {{ site.time | date: "%Y" }} <strong>{{ site.author.name | default: "Md Rezwane Sadik" }}</strong><br>
+      <span class="footer-meta">Last Updated: {{ "now" | date: "%B %d, %Y" }}</span>
     </div>
-    
+
+    <div class="footer-center">
+      <span class="footer-quote">"Live, Love, Laugh!"</span>
+    </div>
+
+    <div class="footer-right">
+      <a href="#" class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+        Top <i class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+
   </div>
 </footer>

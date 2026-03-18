@@ -8,384 +8,236 @@ redirect_from:
 ---
 
 <style>
-  /* Base Styles for Desktop */
-  .bio-text {
-    text-align: justify; 
-    font-size: .9em; 
-    line-height: 1.6; 
-    margin-bottom: 25px; 
-    color: #333;
+  /* Global Modern Academic Style - Perfectly matched to Publications Page */
+  :root {
+    --primary-color: #2c3e50; 
+    --accent-color: #f0f7ff;  
+    --text-main: #3b3b3b;     
+    --text-heading: #2c3e50;  
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   }
-  .research-box {
-    background-color: #fcfcfc; 
-    padding: 15px; 
-    border-left: 4px solid #5594d2; 
-    margin-bottom: 30px; 
-    border-radius: 0 4px 4px 0;
-  }
-  .research-text {
-    margin: 0; 
-    font-size: 0.9em; 
-    color: #444; 
-    font-weight: 600; 
-    text-transform: uppercase; 
-    letter-spacing: 0.8px;
-    line-height: 1.6;
-  }
-  
-  /* Timeline Scrollbar Styles */
-  .news-scroll-container::-webkit-scrollbar { width: 5px; }
-  .news-scroll-container::-webkit-scrollbar-track { background: #f9f9f9; }
-  .news-scroll-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
-  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: #5594d2; }
 
-  /* Timeline Base Styles */
+  body {
+    font-family: var(--font-family);
+  }
+
+  /* Standardized Section Titles */
+  .section-title {
+    margin-top: 45px; 
+    border-bottom: 1px solid #eaeaea; 
+    padding-bottom: 8px; 
+    text-transform: uppercase; 
+    color: var(--text-heading);
+    font-size: 1.15em !important; /* Forced to 1.15em to prevent theme overrides */
+    letter-spacing: 0.05em;
+    font-weight: 600;
+  }
+
+  /* Standardized Text Style for Bio and Research */
+  .content-text {
+    text-align: justify; 
+    font-size: 0.95em; 
+    line-height: 1.6; 
+    margin-bottom: 20px; 
+    color: var(--text-main);
+  }
+
+  /* Research Interest Badges */
+  .interest-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .pill {
+    background-color: var(--primary-color); 
+    color: #ffffff; 
+    font-size: 0.85em; 
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 4px; 
+    letter-spacing: 0.03em;
+  }
+
+  /* News Timeline Styling */
+  .news-scroll-container {
+    max-height: 500px; 
+    overflow-y: auto; 
+    margin-top: 20px;
+    padding-right: 15px;
+  }
+  .news-scroll-container::-webkit-scrollbar { width: 6px; }
+  .news-scroll-container::-webkit-scrollbar-track { background: #f9f9f9; border-radius: 10px; }
+  .news-scroll-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
+  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: #999; }
+
   .timeline-item {
     display: flex; 
-    margin-bottom: 20px; 
-    font-size: 0.8em; 
-    line-height: 1.6;
+    margin-bottom: 12px; 
+    font-size: 0.9em; 
+    line-height: 1.5;
+    padding: 4px 0;
+    align-items: baseline; 
   }
+  
   .timeline-date {
-    min-width: 90px; 
+    min-width: 95px; 
     font-weight: 700; 
-    color: #777;
+    color: #555; /* Matched to publications abstract button gray */
   }
+  
   .timeline-content {
     flex: 1; 
-    padding-left: 15px; 
-    color: #333; 
-    text-align: justify;
-  }
-  .timeline-content ul {
-    margin: 0; 
-    padding-left: 15px;
+    color: var(--text-main);
   }
 
-  /* 📱 MOBILE RESPONSIVE FIXES */
+  /* Highlighted Milestones */
+  .timeline-item.milestone {
+    background-color: var(--accent-color); 
+    border-radius: 4px;
+    padding: 8px 12px; 
+    margin-left: -10px; 
+    border-left: 3px solid var(--primary-color);
+    margin-top: 2px;
+    margin-bottom: 12px;
+  }
+
+  /* Collaboration Alert - Reverted to Original Color */
+  .collab-box {
+    background-color: #fffaf0; 
+    border-left: 4px solid #d92121;
+    padding: 12px 15px;
+    font-size: 0.9em;
+    color: #333;
+    font-weight: 500;
+    margin: 30px 0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
   @media (max-width: 768px) {
-    .bio-text {
-      text-align: left; /* মোবাইলে justify দেখতে খারাপ লাগে, তাই left করা হলো */
-      font-size: 0.8em;
-    }
-    .research-text {
-      font-size: 0.8em;
-    }
-    .research-text span {
-      display: inline-block; /* মোবাইলে পাইপ (|) গুলো সুন্দরভাবে নিচে নামবে */
-    }
-    .timeline-item {
-      flex-direction: column; /* মোবাইলে তারিখ লেখার উপরে চলে যাবে */
-      margin-bottom: 25px;
-    }
-    .timeline-date {
-      min-width: auto;
-      margin-bottom: 5px;
-      color: #5594d2; /* মোবাইলে তারিখ হাইলাইট করার জন্য নীল রঙ */
-      border-bottom: 1px dashed #eee;
-      padding-bottom: 3px;
-      display: inline-block;
-    }
-    .timeline-content {
-      padding-left: 0; /* প্যাডিং শূন্য করা হলো যাতে পুরো স্ক্রিন ব্যবহার করা যায় */
-      text-align: left;
-    }
+    .timeline-item { flex-direction: column; }
+    .timeline-date { margin-bottom: 2px; font-size: 0.9em; }
+    .content-text { text-align: left; }
+    .timeline-item.milestone { margin-left: 0; }
   }
 </style>
 
+<h2 class="section-title" style="margin-top: 0;">Biography</h2>
 
-<h2 style="margin-top: 0; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Biography</h2>
-
-<div class="bio-text">
-  I am a Data Manager at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. Bridging the gap between industry and academia, my professional background encompasses extensive data-driven roles and teaching experience, including serving as an Adjunct Lecturer at USD's Beacom School of Business.
+<div class="content-text">
+  I am a <strong>Data Manager</strong> at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka, and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. 
 </div>
 
-<div class="bio-text">
-  As an active researcher, my work explores the applied intersections of Machine Learning and Deep Learning with a primary focus on Natural Language Processing (NLP). I am dedicated to developing and optimizing intelligent computational models to address complex, real-world challenges, ranging from sentiment analysis and fake news detection to predictive healthcare modeling. My collaborative research has been featured in reputable peer-reviewed journals and international conferences, including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.
+<div class="content-text">
+  As an active researcher, my work explores the applied intersections of <strong>Machine Learning</strong> and <strong>Deep Learning</strong>, with a primary focus on <strong>Natural Language Processing (NLP)</strong>. I am dedicated to addressing real-world challenges, ranging from sentiment analysis to predictive healthcare modeling. My collaborative research has been featured in reputable peer-reviewed venues including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.
 </div>
 
-
-<p style="color: #d92121; text-align: justify; font-size: .85em; font-weight: 500; margin-bottom: 40px; line-height: 1.5;">
+<div class="collab-box">
   I am actively seeking collaborative research opportunities to contribute to the world of data.
-</p>
-
-
-<h2 style="margin-top: 0; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Research Interests</h2>
-
-<div style="margin-bottom: 30px;">
-  <p style="margin: 0; font-size: 0.9em; color: #444; font-weight: 500; letter-spacing: 0.5px;">
-    Deep Learning <span style="color: #aaa; margin: 0 10px;">|</span> 
-    NLP <span style="color: #aaa; margin: 0 10px;">|</span> 
-    LLM <span style="color: #aaa; margin: 0 10px;">|</span> 
-    Image Processing
-  </p>
 </div>
 
+<h2 class="section-title">Research Interests</h2>
+<div class="interest-pills">
+  <span class="pill">Deep Learning</span>
+  <span class="pill">NLP</span>
+  <span class="pill">LLM</span>
+  <span class="pill">Image Processing</span>
+  <span class="pill">Predictive Modeling</span>
+</div>
 
-
-<h2 style="margin-top: 40px; border-bottom: 1px solid #eee; text-transform: uppercase; padding-bottom: 10px; color: #333;">Recent News</h2>
-
-<div class="news-scroll-container" style="max-height: 500px; overflow-y: auto; padding-right: 15px; margin-top: 20px;">
+<h2 class="section-title">Recent News</h2>
+<div class="news-scroll-container">
   
   <div class="timeline-item">
     <div class="timeline-date">Jan 2025</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on aspect-based sentiment analysis of Amazon product reviews using hybrid feature engineering got accepted at the <strong>ICTCS</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Amazon review sentiment analysis paper accepted at <strong>ICTCS '25</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">July 2024</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on accurate thyroid disease detection with ensemble learning models got accepted at the <strong>AISP</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Thyroid disease detection paper accepted at <strong>AISP '24</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Apr 2024</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on deep learning-based forecasting models for dengue outbreaks in Bangladesh got accepted at the <strong>ICSSES</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Dengue outbreak forecasting paper accepted at <strong>ICSSES '24</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Mar 2024</div>
-    <div class="timeline-content">
-      <ul>
-        Our article on enhancing Bangla fake news detection using BiGRU and deep learning techniques got accepted at the <strong>ICPS</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Bangla fake news detection article accepted at <strong>ICPS '24</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Feb 2024</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on computer vision-based Bangla sign language recognition using transfer learning got accepted at the <strong>ICDSIS</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Bangla sign language recognition paper accepted at <strong>ICDSIS '24</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Jan 2024</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on enhancing crop management using ensemble machine learning for real-time recommendation systems got accepted at <strong>ICSSES</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Crop management recommendation system paper accepted at <strong>ICSSES '24</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Dec 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Our article on lexicon and deep learning-based approaches for sentiment analysis on short texts got accepted at the <strong>Journal of Computer and Communications</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Short text sentiment analysis article accepted in the <strong>Journal of Computer and Communications</strong>.</div>
   </div>
-
-
-
 
   <div class="timeline-item">
     <div class="timeline-date">Nov 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on supervised machine learning approaches to identify fake and true news from social media data got accepted at the <strong>SASI-ITE</strong>!
-      </ul>
-    </div>
+    <div class="timeline-content">Social media fake news identification paper accepted at <strong>SASI-ITE '23</strong>.</div>
   </div>
 
-
-
-<div class="timeline-item">
-    <div class="timeline-date">Oct 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on machine learning approaches for early-stage liver disease prediction got published in the <strong>ISBM</strong>!
-      </ul>
-    </div>
-  </div>
-
-
-<div class="timeline-item">
-    <div class="timeline-date">Sep 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Our paper on early-stage diabetes risk prediction using supervised machine learning algorithms got accepted at the <strong>INCOFT</strong>!
-      </ul>
-    </div>
-  </div>
-
-  
   <div class="timeline-item">
+    <div class="timeline-date">Oct 2023</div>
+    <div class="timeline-content">Liver disease prediction paper published in <strong>ISBM '23</strong>.</div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="timeline-date">Sep 2023</div>
+    <div class="timeline-content">Diabetes risk prediction paper accepted at <strong>INCOFT '23</strong>.</div>
+  </div>
+
+  <div class="timeline-item milestone">
     <div class="timeline-date">Aug 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Joined the <strong>Department of Education, State of South Dakota</strong> as Data Manager.
-      </ul>
-    </div>
+    <div class="timeline-content">Joined the <strong>SD Department of Education</strong> as a <strong>Data Manager</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Jul 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Our book chapter on implied communality deficit and heroism got accepted at the <strong>Encyclopedia of Heroism Studies</strong> by Springer!
-      </ul>
+    <div class="timeline-content">Book chapter accepted in the <strong>Encyclopedia of Heroism Studies</strong> (Springer).</div>
   </div>
 
-  </div>
   <div class="timeline-item">
     <div class="timeline-date">May 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Joined the <strong>Center for Teaching & Learning, University of South Dakota</strong> as Data Analyst.
-      </ul>
-    </div>
+    <div class="timeline-content">Joined the <strong>USD Center for Teaching & Learning</strong> as a <strong>Data Analyst</strong>.</div>
   </div>
 
-  <div class="timeline-item">
-    <div class="timeline-date">Apr 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Published research at <strong>INCOFT</strong> and <strong>ISBM</strong>, and authored a book chapter in the <em>Encyclopedia of Heroism Studies</em>.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
+  <div class="timeline-item milestone">
     <div class="timeline-date">Mar 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Inducted into the <strong>Beta Gamma Sigma Honor Society</strong> for academic excellence.
-      </ul>
-    </div>
+    <div class="timeline-content">Inducted into the <strong>Beta Gamma Sigma Honor Society</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Jan 2023</div>
-    <div class="timeline-content">
-      <ul>
-        Started serving as an <strong>Adjunct Lecturer</strong> at the Beacom School of Business, University of South Dakota.
-      </ul>
-    </div>
+    <div class="timeline-content">Appointed as an <strong>Adjunct Lecturer</strong> at the <strong>USD Beacom School of Business</strong>.</div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item milestone">
     <div class="timeline-date">Dec 2022</div>
-    <div class="timeline-content">
-      <ul>
-        Graduated with an <strong>M.Sc. in Business Analytics</strong> (CGPA: 4.0) from the University of South Dakota.
-      </ul>
-    </div>
+    <div class="timeline-content">Graduated with an <strong>M.Sc. in Business Analytics</strong> (CGPA: 4.0) from <strong>USD</strong>.</div>
   </div>
 
-  <div class="timeline-item">
+  <div class="timeline-item milestone">
     <div class="timeline-date">Apr 2022</div>
-    <div class="timeline-content">
-      <ul>
-        Received the <strong>Leonard E. Arnaud memorial Award & Scholarship</strong> for leadership and extracurricular achievements.
-      </ul>
-    </div>
+    <div class="timeline-content">Received the <strong>Leonard E. Arnaud Memorial Award & Scholarship</strong>.</div>
   </div>
 
   <div class="timeline-item">
     <div class="timeline-date">Aug 2021</div>
-    <div class="timeline-content">
-      <ul>
-        Joined the Beacom School of Business, University of South Dakota as a <strong>Graduate Research Assistant</strong>.
-      </ul>
-    </div>
+    <div class="timeline-content">Joined the <strong>USD Beacom School of Business</strong> as a <strong>Graduate Research Assistant</strong>.</div>
   </div>
-
-  {% comment %}
-  <div class="timeline-item">
-    <div class="timeline-date">Apr 2021</div>
-    <div class="timeline-content">
-      <ul>
-        Graduated with a <strong>M.B.A in Marketing</strong> from the IBA, University of Dhaka, Bangladesh.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jan 2021</div>
-    <div class="timeline-content">
-      <ul>
-        Joined <strong>Millennium Information Solution Limited</strong>, Bangladesh as Business Analyst.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Nov 2020</div>
-    <div class="timeline-content">
-      <ul>
-        Joined <strong>iDE</strong>, Bangladesh as Data Analyst Intern.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jan 2019</div>
-    <div class="timeline-content">
-      <ul>
-        Joined batch 61D of IBA, University of Dhaka, Bangladesh pursuing <strong>M.B.A. in Marketing</strong>.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">May 2017</div>
-    <div class="timeline-content">
-      <ul>
-        Joined <strong>LG</strong>, Bangladesh as Quality Assurance Engineer.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jan 2016</div>
-    <div class="timeline-content">
-      <ul>
-        Joined <strong>Walton TV R&D</strong>, Bangladesh as Assistant Engineer.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Jan 2015</div>
-    <div class="timeline-content">
-      <ul>
-        Joined <strong>Confidence Electic Limited</strong>, Bangladesh as Planning Engineer.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Nov 2014</div>
-    <div class="timeline-content">
-      <ul>
-        Graduated with a <strong>B.Sc. in EEE</strong> from the Islamic University of Technology, Bangladesh.
-      </ul>
-    </div>
-  </div>
-
-  <div class="timeline-item">
-    <div class="timeline-date">Apr 2014</div>
-    <div class="timeline-content">
-      <ul>
-        Secured <strong>2nd Runner-up</strong> position in the Business Case Study competition at Esonance 2014.
-      </ul>
-    </div>
-  </div>
-  {% endcomment %}
 
 </div>

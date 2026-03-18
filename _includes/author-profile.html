@@ -7,95 +7,138 @@
 {% endif %}
 
 <style>
-  .hover-lift {
-    transition: transform 0.3s ease !important;
+  /* Sidebar Specific Styling */
+  .sidebar-wrap {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #3b3b3b;
   }
-  .hover-lift:hover {
-    transform: translateY(-5px) !important;
-    cursor: pointer;
+  
+  .sidebar-section-title {
+    font-size: 0.95em; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    letter-spacing: 0.05em;
+    color: #2c3e50; 
+    margin-bottom: 15px; 
+    border-bottom: 1px solid #eaeaea; 
+    padding-bottom: 4px;
+    text-align: left;
+  }
+
+  /* Smooth Hover Effects */
+  .hover-lift { transition: transform 0.3s ease !important; }
+  .hover-lift:hover { transform: translateY(-4px) !important; cursor: pointer; }
+  
+  /* Grayscale-to-Color for Affiliation Logos */
+  .affil-logo { 
+    display: block; 
+    margin: 0 auto; 
+    filter: grayscale(100%) opacity(70%); 
+    transition: all 0.3s ease; 
+    object-fit: contain; 
+  }
+  .affil-logo:hover { filter: grayscale(0%) opacity(100%); }
+
+  /* FontAwesome Icon Styling */
+  .fa-icon {
+    font-size: 1.4em; 
+    color: #64748b; 
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+  
+  /* Icon Color transitions on hover */
+  .fa-icon:hover { transform: translateY(-3px); }
+  .email-icon:hover { color: #d93025; }      
+  .scholar-icon:hover { color: #4285f4; }    
+  .github-icon:hover { color: #333333; }     
+  .linkedin-icon:hover { color: #0077b5; }   
+
+  /* Clean Academic Text for Interests */
+  .academic-keywords {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: #555;
+    text-align: left;
+  }
+  .academic-keywords span {
+    display: inline-block;
+    transition: color 0.2s ease;
+  }
+  .academic-keywords span:hover {
+    color: #2c3e50;
+    cursor: default;
+  }
+  .keyword-dot {
+    color: #ccc;
+    margin: 0 4px;
+    font-size: 0.8em;
   }
 </style>
 
-<div itemscope itemtype="http://schema.org/Person">
+<div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
-<div class="author__avatar">
-  <img src="{{ base_path }}/images/profile.jpg" class="author__avatar hover-lift" alt="{{ author.name }}" fetchpriority="high" style="border-radius: 10%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 275px;">
-</div>
+  <div class="author__avatar" style="text-align: center; margin-bottom: 15px;">
+    <img src="{{ base_path }}/images/profile.jpg" class="author__avatar hover-lift" alt="{{ author.name }}" fetchpriority="high" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 220px; object-fit: cover;">
+  </div>
 
-<div class="author__content" style="text-align: center;">
-  
-  <p class="author__bio" style="font-style: italic; font-size: 0.8em; color: #444; margin-top: 5px;">
-    "Live, Love, Laugh!"
-  </p>
-</div>
+  <div class="author__content" style="text-align: center; margin-bottom: 25px;">
+    <h3 style="margin: 0; color: #2c3e50; font-size: 1.1em; font-weight: 700; text-transform: uppercase;">Md Rezwane Sadik</h3>
+    <p style="font-size: 0.7em; color: #666; margin-top: 5px; margin-bottom: 0; font-weight: 500;"></p>
+  </div>
 
-  <div style="margin-top: 30px; margin-bottom: 25px; padding: 0 5px;">
-    <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Md Rezwane Sadik</p>
-    <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; justify-items: center; text-align: center; align-items: end;">
+  <div style="margin-bottom: 30px;">
+    <div style="display: flex; justify-content: center; gap: 20px;">
       
       {% if author.email %}
-      <a href="mailto:{{ author.email }}" title="rezwane@ieee.org" style="text-decoration: none;">
-        <img src="https://www.vectorlogo.zone/logos/gmail/gmail-icon.svg" class="hover-lift" width="28" alt="Email">
+      <a href="mailto:{{ author.email }}" title="rezwane@ieee.org">
+        <i class="fas fa-envelope fa-icon email-icon"></i>
       </a>
       {% endif %}
 
       {% if author.googlescholar %}
-      <a href="{{ author.googlescholar }}" title="Google Scholar" style="text-decoration: none;">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" class="hover-lift" width="28" alt="Scholar">
+      <a href="{{ author.googlescholar }}" title="Google Scholar">
+        <i class="fas fa-graduation-cap fa-icon scholar-icon"></i>
       </a>
       {% endif %}
 
       {% if author.github %}
-      <a href="https://github.com/{{ author.github }}" title="GitHub" style="text-decoration: none;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="hover-lift" width="28" alt="GitHub">
+      <a href="https://github.com/{{ author.github }}" title="GitHub">
+        <i class="fab fa-github fa-icon github-icon"></i>
       </a>
       {% endif %}
 
       {% if author.linkedin %}
-      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn" style="text-decoration: none;">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="hover-lift" width="28" alt="LinkedIn">
+      <a href="https://www.linkedin.com/in/{{ author.linkedin }}" title="LinkedIn">
+        <i class="fab fa-linkedin fa-icon linkedin-icon"></i>
       </a>
       {% endif %}
+
     </div>
   </div>
 
-  <div style="margin-top: 30px; padding: 0 5px;">
-    <p style="font-size: 1.1em; font-weight: bold; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 5px; text-transform: uppercase;">AFFILIATIONS</p>
+  <div style="margin-bottom: 35px; padding: 0 5px;">
+    <div class="sidebar-section-title">Affiliations</div>
     
-    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; justify-items: center; align-items: center;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px 15px; align-items: center; justify-items: center;">
       {% comment %}
-      <img src="{{ base_path }}/images/KSU.png" class="hover-lift" style="width: 100%; max-width: 70px; height: 70%; display: block;">
-      <img src="{{ base_path }}/images/HMS1.png" class="hover-lift" style="width: 125%; max-width: 180px; height: 90%; display: block;">
-      <img src="{{ base_path }}/images/USD.png" class="hover-lift" style="grid-column: span 2; width: 100%; max-width: 100px; height: auto; display: block;">
-      <img src="{{ base_path }}/images/DOE.jpg" class="hover-lift" style="grid-column: span 2; width: 100%; max-width: 200px; height: auto; display: block;">
+      <img src="{{ base_path }}/images/KSU.png" class="affil-logo hover-lift" style="width: 75px;" alt="Kennesaw State University">
       
+      <img src="{{ base_path }}/images/HMS1.jpg" class="affil-logo hover-lift" style="width: 60px;" alt="Harvard Medical School">
       {% endcomment %}
-      <img src="{{ base_path }}/images/USD.png" class="hover-lift" style="grid-column: span 2; width: 100%; max-width: 100px; height: auto; display: block;">
-      <img src="{{ base_path }}/images/DOE.jpg" class="hover-lift" style="grid-column: span 2; width: 100%; max-width: 200px; height: auto; display: block;">
+      <img src="{{ base_path }}/images/USD.png" class="affil-logo hover-lift" style="width: 80px;" alt="University of South Dakota">
       
+      <img src="{{ base_path }}/images/DOE.jpg" class="affil-logo hover-lift" style="width: 180px;" alt="Department of Education">
       
-      </div>
-  </div>
-
-
-  <div style="margin-top: 30px; padding: 0 5px;">
-    <p style="font-size: 1.1em; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; border-bottom: 1px solid #ddd; padding-bottom: 5px;">Interests</p>
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; justify-items: center; align-items: center;">
-        
-        <img src="{{ base_path }}/images/pickleball.png" class="hover-lift" title="Pickleball" style="width: 60px; height: auto;">
-        <img src="{{ base_path }}/images/cricket.png" class="hover-lift" title="Cricket" style="width: 55px; height: auto;">
-        <img src="{{ base_path }}/images/tabletennis.png" class="hover-lift" title="Table Tennis" style="width: 55px; height: auto;">
-
-        <img src="{{ base_path }}/images/adventure.avif" class="hover-lift" title="Adventure" style="width: 60px; height: auto;">
-        <img src="{{ base_path }}/images/games.avif" class="hover-lift" title="Games" style="width: 60px; height: auto;">
     </div>
   </div>
 
+ 
 
-    
-  <div style="margin-top: 30px; padding: 0 45px;", class="github-stats-right">
-        <a href='https://mapmyvisitors.com/web/1c36g'  title='Visit tracker'><img src='https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=m&d=lSzZfQ2Us9dYiV01T5GNc3tqK2pNAxQX2Mbse6RV51s'/></a>
+  <div style="margin-top: 20px; text-align: center; opacity: 0.8; transition: opacity 0.3s;" class="hover-lift">
+    <a href='https://mapmyvisitors.com/web/1c36g' title='Visit tracker'>
+      <img style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" src='https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=m&d=lSzZfQ2Us9dYiV01T5GNc3tqK2pNAxQX2Mbse6RV51s' alt="Visitor Map"/>
+    </a>
   </div>
-
 
 </div>
