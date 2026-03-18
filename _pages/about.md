@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "BIOGRAPHY"
 author_profile: false
 redirect_from: 
   - /about/
@@ -124,7 +124,7 @@ redirect_from:
   }
 </style>
 
-<h2 class="section-title" style="margin-top: 0;">Biography</h2>
+<h2 class="section-title" style="margin-top: 0;"></h2>
 
 <div class="content-text">
   I am a <strong>Data Manager</strong> at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka, and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. 
