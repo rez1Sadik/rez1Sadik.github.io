@@ -404,3 +404,40 @@
   font-size: $type-size-6;
   text-transform: uppercase;
 }
+
+
+/* ----------------------------------------- */
+/* Force Academic Justify Alignment          */
+/* ----------------------------------------- */
+.page__content p, 
+.archive p {
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+
+.page {
+  padding-right: 0 !important;
+}
+
+/* Constrain desktop text width for optimal reading */
+.page__inner-wrap .page__content {
+  padding-right: 0 !important;
+  max-width: 870px !important; /* Stops text from stretching infinitely on laptops */
+}
+
+/* Allow text to use 100% of the screen ONLY on phones/tablets */
+@media (max-width: 1024px) {
+  .page__inner-wrap .page__content {
+    max-width: 100% !important;
+  }
+}
+
+/* ----------------------------------------- */
+/* Close the Gap Between Sidebar & Content   */
+/* ----------------------------------------- */
+@media (min-width: 1025px) {
+  .page {
+    padding-left: 15px !important; /* Reduces the theme's built-in inner padding */
+    margin-left: 0px !important; /* Pulls the entire text block to the left */
+  }
+}

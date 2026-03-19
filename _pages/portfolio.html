@@ -1,33 +1,34 @@
 ---
-layout: archive
+layout: single
 title: "TECHNICAL SKILLS"
 permalink: /portfolio/
 author_profile: false
 ---
 
 <style>
-  /* Minimalist Academic Badge Styling */
+  /* Minimalist Academic Badge Styling - Matched to Bio & Pubs */
   :root {
     --primary-color: #2c3e50;
     --text-main: #3b3b3b;
-    --bg-light: #fcfcfc;
+    --bg-light: #fdfdfd;
     --border-light: #eaeaea;
   }
 
   .skill-category {
-    margin-bottom: 40px;
+    margin-bottom: 45px;
   }
   
   /* Matched exactly to your .section-title style */
   .skill-category h3 {
-    margin-top: 30px; 
+    margin-top: 0px; 
     border-bottom: 1px solid var(--border-light); 
     padding-bottom: 8px; 
     text-transform: uppercase; 
     color: var(--primary-color);
-    font-size: 1.15em; 
+    font-size: 1.15em !important; 
     letter-spacing: 0.05em;
     font-weight: 600;
+    margin-bottom: 20px;
   }
   
   .badge-container {
@@ -36,25 +37,26 @@ author_profile: false
     gap: 12px;
   }
   
-  /* Academic Tag Style (Matches Publication Buttons) */
+  /* Academic Tag Style */
   .skill-badge {
     display: flex;
     align-items: center;
     background-color: var(--bg-light);
     border: 1px solid var(--border-light);
-    padding: 6px 14px;
-    border-radius: 4px; /* Squared off for academic look */
-    font-size: 0.9em;
+    padding: 8px 16px;
+    border-radius: 4px; 
+    font-size: 0.95em;
     color: #555;
     font-weight: 500;
     transition: all 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
   }
   
   /* Grayscale logos by default for a clean look */
   .skill-badge img {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
     object-fit: contain;
     filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
@@ -65,13 +67,32 @@ author_profile: false
     transform: translateY(-3px);
     border-color: var(--primary-color);
     color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     cursor: default;
   }
   
   /* Snap to full color on hover */
   .skill-badge:hover img {
     filter: grayscale(0%) opacity(100%);
+  }
+
+  /* Eye-Soothing Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .badge-container {
+      gap: 10px;
+    }
+    .skill-badge {
+      padding: 6px 12px;
+      font-size: 0.85em;
+    }
+    .skill-badge img {
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+    .skill-category {
+      margin-bottom: 35px;
+    }
   }
 </style>
 
@@ -99,7 +120,8 @@ author_profile: false
 </div>
 
 <div class="skill-category">
-  <h3>Visualizations & Tools</h3> <div class="badge-container">
+  <h3>Visualizations & Tools</h3> 
+  <div class="badge-container">
     <div class="skill-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"> Power BI</div>
     <div class="skill-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" alt="Tableau"> Tableau</div>
     <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"> VS Code</div>

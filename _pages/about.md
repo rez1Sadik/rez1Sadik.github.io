@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 <style>
-  /* Global Modern Academic Style - Perfectly matched to Publications Page */
+  /* Global Modern Academic Style */
   :root {
     --primary-color: #2c3e50; 
     --accent-color: #f0f7ff;  
@@ -28,16 +28,17 @@ redirect_from:
     padding-bottom: 8px; 
     text-transform: uppercase; 
     color: var(--text-heading);
-    font-size: 1.15em !important; /* Forced to 1.15em to prevent theme overrides */
+    font-size: 1.15em !important; 
     letter-spacing: 0.05em;
     font-weight: 600;
   }
 
-  /* Standardized Text Style for Bio and Research */
+  /* Standardized Text Style for Bio */
   .content-text {
-    text-align: justify; 
+    text-align: justify !important; 
+    text-justify: inter-word !important;
     font-size: 0.95em; 
-    line-height: 1.6; 
+    line-height: 1.7; 
     margin-bottom: 20px; 
     color: var(--text-main);
   }
@@ -55,9 +56,10 @@ redirect_from:
     color: #ffffff; 
     font-size: 0.85em; 
     font-weight: 600;
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 4px; 
     letter-spacing: 0.03em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   }
 
   /* News Timeline Styling */
@@ -67,14 +69,14 @@ redirect_from:
     margin-top: 20px;
     padding-right: 15px;
   }
-  .news-scroll-container::-webkit-scrollbar { width: 6px; }
-  .news-scroll-container::-webkit-scrollbar-track { background: #f9f9f9; border-radius: 10px; }
-  .news-scroll-container::-webkit-scrollbar-thumb { background: #ccc; border-radius: 10px; }
-  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: #999; }
+  .news-scroll-container::-webkit-scrollbar { width: 5px; }
+  .news-scroll-container::-webkit-scrollbar-track { background: #fdfdfd; }
+  .news-scroll-container::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+  .news-scroll-container::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
 
   .timeline-item {
     display: flex; 
-    margin-bottom: 12px; 
+    margin-bottom: 14px; 
     font-size: 0.9em; 
     line-height: 1.5;
     padding: 4px 0;
@@ -84,7 +86,7 @@ redirect_from:
   .timeline-date {
     min-width: 95px; 
     font-weight: 700; 
-    color: #555; /* Matched to publications abstract button gray */
+    color: #64748b; 
   }
   
   .timeline-content {
@@ -103,28 +105,37 @@ redirect_from:
     margin-bottom: 12px;
   }
 
-  /* Collaboration Alert - Reverted to Original Color */
+  /* Collaboration Alert - Eye-Soothing Academic Style */
   .collab-box {
-    background-color: #fffaf0; 
-    border-left: 4px solid #d92121;
-    padding: 12px 15px;
-    font-size: 0.9em;
-    color: #333;
+    background-color: #f8fbfd; /* Soft, clean icy blue */
+    border-left: 4px solid var(--primary-color); /* Navy border */
+    padding: 14px 18px;
+    font-size: 0.95em;
+    color: var(--text-heading);
     font-weight: 500;
     margin: 30px 0;
     border-radius: 0 4px 4px 0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    line-height: 1.6;
   }
 
+  /* Mobile & Tablet Responsiveness */
   @media (max-width: 768px) {
-    .timeline-item { flex-direction: column; }
-    .timeline-date { margin-bottom: 2px; font-size: 0.9em; }
-    .content-text { text-align: left; }
-    .timeline-item.milestone { margin-left: 0; }
+    .timeline-item { 
+      flex-direction: column; 
+      margin-bottom: 18px;
+    }
+    .timeline-date { 
+      margin-bottom: 4px; 
+      font-size: 0.85em; 
+      color: var(--primary-color);
+    }
+    .timeline-item.milestone { 
+      margin-left: 0; 
+      padding: 10px 12px;
+    }
   }
 </style>
-
-<h2 class="section-title" style="margin-top: 0;"></h2>
 
 <div class="content-text">
   I am a <strong>Data Manager</strong> at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka, and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. 
@@ -135,7 +146,7 @@ redirect_from:
 </div>
 
 <div class="collab-box">
-  I am actively seeking collaborative research opportunities to contribute to the world of data.
+  <i class="fas fa-lightbulb" style="color: #64748b; margin-right: 8px;"></i> I am actively seeking collaborative research opportunities to contribute to the world of data.
 </div>
 
 <h2 class="section-title">Research Interests</h2>
