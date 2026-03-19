@@ -164,11 +164,12 @@ redirect_from:
 
 <h2 class="section-title">Recent News</h2>
 <div class="news-scroll-container">
-
+  {% comment %}
   <div class="timeline-item milestone">
     <div class="timeline-date">Mar 2026</div>
     <div class="timeline-content">Accepted a fully-funded Ph.D. offer in Computer Science at <strong>Kennesaw State University</strong>.</div>
   </div>
+  {% endcomment %}
   
   <div class="timeline-item">
     <div class="timeline-date">Jan 2025</div>
