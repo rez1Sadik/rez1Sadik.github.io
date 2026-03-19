@@ -36,7 +36,7 @@ author:
   arxiv            : 
   googlescholar    : "https://scholar.google.com/citations?user=mdrezwanesadik/research"
   impactstory      : 
-  orcid            : 
+  orcid            : "0009-0003-9909-1773"
   semantic         : 
   pubmed           : 
   researchgate     : 
@@ -145,7 +145,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-analytics-4" 
+  provider               :  "google-gtag" 
   google:
     tracking_id          : "G-HR7034W8DR"
 

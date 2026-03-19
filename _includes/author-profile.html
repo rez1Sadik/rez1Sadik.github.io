@@ -52,7 +52,8 @@
   .email-icon:hover { color: #d93025; }      
   .scholar-icon:hover { color: #4285f4; }    
   .github-icon:hover { color: #333333; }     
-  .linkedin-icon:hover { color: #0077b5; }   
+  .linkedin-icon:hover { color: #0077b5; }
+  .orcid-icon:hover { color: #a6ce39; }  
 
   /* Clean Academic Text for Interests */
   .academic-keywords {
@@ -114,6 +115,12 @@
       </a>
       {% endif %}
 
+      {% if author.orcid %}
+      <a href="https://orcid.org/{{ author.orcid }}" title="ORCID">
+        <i class="fab fa-orcid fa-icon orcid-icon"></i>
+      </a>
+      {% endif %}
+
     </div>
   </div>
 
@@ -133,12 +140,34 @@
     </div>
   </div>
 
- 
-
-  <div style="margin-top: 20px; text-align: center; opacity: 0.8; transition: opacity 0.3s;" class="hover-lift">
-    <a href='https://mapmyvisitors.com/web/1c36g' title='Visit tracker'>
-      <img style="max-width: 100%; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" src='https://mapmyvisitors.com/map.png?cl=ffffff&w=a&t=m&d=lSzZfQ2Us9dYiV01T5GNc3tqK2pNAxQX2Mbse6RV51s' alt="Visitor Map"/>
+  <div style="margin-top: 30px; text-align: center; border-top: 1px solid #eaeaea; padding-top: 20px;">
+    <a href="{{ base_path }}/files/Academic_CV_Sadik.pdf" target="_blank" class="hover-lift" style="display: inline-block; padding: 8px 20px; border: 1px solid #2c3e50; border-radius: 4px; color: #2c3e50; font-size: 0.85em; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; transition: all 0.3s ease;">
+      <i class="fas fa-file-pdf" style="margin-right: 6px;"></i> Download CV
     </a>
   </div>
 
 </div>
+
+
+
+  {% comment %}
+
+
+  <div style="margin-top: 30px; border-top: 1px solid #eaeaea; padding-top: 20px; text-align: center;">
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: #fcfcfc; padding: 6px 12px; border-radius: 4px; border: 1px solid #eaeaea; font-size: 0.8em; color: #555;">
+      <span style="height: 8px; width: 8px; background-color: #10b981; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);"></span>
+      Open to Collaborations
+    </div>
+  </div>
+  
+
+  <div style="margin-top: 20px; text-align: center;">
+    <p style="font-size: 0.75em; text-transform: uppercase; letter-spacing: 0.05em; color: #8fa0b3; margin-bottom: 3px; font-weight: 700;">Academic Impact</p>
+    <p style="font-size: 0.85em; color: #555; margin: 0;">
+      Citations: <strong>120+</strong> &nbsp;&bull;&nbsp; h-index: <strong>5</strong>
+    </p>
+  </div>
+
+  {% endcomment %}
+
+  
