@@ -137,13 +137,17 @@ redirect_from:
   }
 </style>
 
+{% comment %}
 <div class="content-text">
-  I am a <strong>Data Manager</strong> at the South Dakota Department of Education, where I leverage data analytics to drive evidence-based educational strategies. My academic foundation comprises an M.Sc. in Business Analytics from the University of South Dakota, an M.B.A. in Marketing from the IBA, University of Dhaka, and a B.Sc. in Electrical and Electronics Engineering from the Islamic University of Technology. 
+  <strong>Md Rezwane Sadik</strong> is a fully funded Ph.D. researcher in Computer Science at Kennesaw State University, advised by <strong>Dr. Shumit Saha</strong> in the <strong>Resonance Lab</strong>. His research applies Machine Learning and Natural Language Processing (NLP) to predictive healthcare modeling. Currently, he develops deep learning architectures to build AI-driven diagnostic tools for <strong>Obstructive Sleep Apnea (OSA)</strong>. Through multi-institutional collaborations his work aims to translate clinical algorithms into scalable solutions for healthcare systems, national laboratories, and industry. Previously, he served as a Data Manager for the South Dakota Department of Education.
 </div>
+{% endcomment %}
 
 <div class="content-text">
-  As an active researcher, my work explores the applied intersections of <strong>Machine Learning</strong> and <strong>Deep Learning</strong>, with a primary focus on <strong>Natural Language Processing (NLP)</strong>. I am dedicated to addressing real-world challenges, ranging from sentiment analysis to predictive healthcare modeling. My collaborative research has been featured in reputable peer-reviewed venues including <strong>ICTCS</strong>, <strong>SASI-ITE</strong>, and <strong>ICSSES</strong>.
+  Sadik’s multidisciplinary foundation includes an M.Sc. in Business Analytics (University of South Dakota), an M.B.A. (IBA, University of Dhaka), and a B.Sc. in Electrical and Electronic Engineering (Islamic University of Technology). He is an inductee of the <strong>Beta Gamma Sigma Honor Society</strong> and recipient of the <strong>Leonard E. Arnaud Memorial Award</strong>. His research addressing real-world data challenges is widely published in peer-reviewed venues indexed across <strong>IEEE Xplore</strong>, the <strong>ACM Digital Library</strong>, and <strong>Springer</strong>.
 </div>
+
+
 
 <div class="collab-box">
   <i class="fas fa-lightbulb" style="color: #64748b; margin-right: 8px;"></i> I am actively seeking collaborative research opportunities to contribute to the world of data.
@@ -160,6 +164,11 @@ redirect_from:
 
 <h2 class="section-title">Recent News</h2>
 <div class="news-scroll-container">
+
+  <div class="timeline-item milestone">
+    <div class="timeline-date">Mar 2026</div>
+    <div class="timeline-content">Accepted a fully-funded Ph.D. offer in Computer Science at <strong>Kennesaw State University</strong>.</div>
+  </div>
   
   <div class="timeline-item">
     <div class="timeline-date">Jan 2025</div>
