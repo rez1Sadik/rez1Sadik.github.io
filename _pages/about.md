@@ -98,9 +98,9 @@ redirect_from:
   .timeline-item.milestone {
     background-color: var(--accent-color); 
     border-radius: 4px;
-    padding: 8px 12px; 
-    margin-left: -10px; 
-    border-left: 3px solid var(--primary-color);
+    padding: 8px 0px; 
+    margin-left: -0px; 
+    border-left: -0px solid var(--primary-color);
     margin-top: 2px;
     margin-bottom: 12px;
   }
@@ -155,11 +155,13 @@ redirect_from:
 
 <h2 class="section-title">Research Interests</h2>
 <div class="interest-pills">
+  <span class="pill">Obstructive Sleep Apnea</span>
   <span class="pill">Deep Learning</span>
-  <span class="pill">NLP</span>
   <span class="pill">LLM</span>
+  <span class="pill">NLP</span>
+  
   <span class="pill">Image Processing</span>
-  <span class="pill">Predictive Modeling</span>
+  
 </div>
 
 <h2 class="section-title">Recent News</h2>
