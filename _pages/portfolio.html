@@ -6,8 +6,9 @@ author_profile: false
 ---
 
 <style>
-  /* 1. Light Mode Variables */
+  /* 1. Force Light Mode at the Browser Level */
   :root {
+    color-scheme: light;
     --primary-color: #2c3e50;
     --text-main: #3b3b3b;
     --text-muted: #64748b;
@@ -15,52 +16,7 @@ author_profile: false
     --border-light: #eaeaea;
   }
 
-  /* 2. STRICT LIGHT MODE OVERRIDE (The Nuclear Option) */
-  @media (prefers-color-scheme: dark) {
-    /* Force main background and text */
-    body, html, .page, #main, .page__inner-wrap, .page__content {
-      background-color: #ffffff !important;
-      color: #3b3b3b !important;
-    }
-    
-    /* Aggressively strip dark backgrounds from the ENTIRE Header */
-    .masthead, 
-    .masthead__inner-wrap, 
-    .greedy-nav, 
-    .greedy-nav .visible-links, 
-    .greedy-nav .hidden-links,
-    .greedy-nav ul,
-    .masthead__menu {
-      background-color: #ffffff !important;
-      background: #ffffff !important;
-      border-bottom-color: #eaeaea !important;
-    }
-    
-    /* Force all header text/links to be dark gray */
-    .masthead a, 
-    .masthead__menu-item a, 
-    .site-title, 
-    .greedy-nav a, 
-    .greedy-nav button {
-      color: #3b3b3b !important;
-      background: transparent !important;
-    }
-    
-    /* General text fallback */
-    p, h1, h2, h3, h4, h5, h6, li {
-      color: #3b3b3b !important;
-    }
-    
-    /* Protect our custom portfolio colors */
-    .portfolio-section-title { color: #2c3e50 !important; }
-    .skill-category h3 { color: #64748b !important; }
-    .project-title { color: #2c3e50 !important; }
-    .project-desc { color: #3b3b3b !important; }
-    .project-btn { color: #2c3e50 !important; border-color: #2c3e50 !important; }
-    .project-btn:hover { color: #ffffff !important; background-color: #2c3e50 !important; }
-  }
-
-  /* 3. Section Headers */
+  /* 2. Section Headers */
   .portfolio-section-title {
     margin: 40px 0 25px;
     border-bottom: 1px solid var(--border-light);
@@ -72,7 +28,7 @@ author_profile: false
     font-weight: 700;
   }
 
-  /* 4. Skills Grid & Categories */
+  /* 3. Skills Grid & Categories */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -131,7 +87,7 @@ author_profile: false
     color: var(--primary-color);
   }
 
-  /* 5. Project Card Styles */
+  /* 4. Project Card Styles */
   .project-card {
     background: var(--bg-light);
     border: 1px solid var(--border-light);
@@ -182,7 +138,7 @@ author_profile: false
     color: #ffffff !important;
   }
 
-  /* 6. Combined Responsiveness */
+  /* 5. Combined Responsiveness */
   @media (max-width: 850px) {
     .skills-grid { grid-template-columns: 1fr; gap: 20px; }
     .project-card { padding: 20px; }
