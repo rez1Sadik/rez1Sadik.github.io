@@ -17,7 +17,7 @@
   .archive p {
     text-align: justify !important;
     text-justify: inter-word !important;
-    line-height: 1.7 !important; /* Slightly increased line height for an airy, academic feel */
+    line-height: 1.7 !important; 
   }
 
   /* Kills the invisible right margin so text uses the full screen width */
@@ -66,7 +66,7 @@
   /* FontAwesome Icon Styling */
   .fa-icon {
     font-size: 1.3em; 
-    color: #8fa0b3; /* Made slightly softer by default */
+    color: #8fa0b3; 
     transition: all 0.3s ease;
     display: inline-block;
   }
@@ -109,7 +109,7 @@
     .sidebar-wrap {
       padding-bottom: 25px !important;
       margin-bottom: 25px !important;
-      border-bottom: 1px solid #eaeaea; /* Creates a clean break before the main text */
+      border-bottom: 1px solid #eaeaea; 
     }
 
     .author__avatar {
@@ -119,15 +119,14 @@
       margin-bottom: 12px !important;
     }
     
-    /* Transforms the square photo into an elegant, perfect circle for mobile */
     .author__avatar img {
       width: 135px !important;     
       height: 160px !important;     
-      
       box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
       margin: 0 auto !important;
       display: inline-block !important;
       object-fit: cover !important;
+      border-radius: 50% !important; /* Circle on mobile */
     }
 
     .author__content {
@@ -136,14 +135,8 @@
       width: 100% !important;
     }
 
-    /* Softens the grid layout for mobile */
-    .affil-grid {
-      gap: 15px !important; 
-    }
-    .affil-logo {
-      max-width: 100px !important; 
-      height: auto !important;
-    }
+    .affil-grid { gap: 15px !important; }
+    .affil-logo { max-width: 100px !important; height: auto !important; }
   }
 
   /* ----------------------------------------- */
@@ -151,33 +144,31 @@
   /* ----------------------------------------- */
   @media (min-width: 1025px) {
     .sidebar-wrap {
-      padding-left: 80px !important; /* Pushes the sidebar away from the left edge */
+      padding-left: 80px !important; 
       margin-right: -60px !important;
     }
   }
 
-  /* Ensure Sidebar Avatar and Name Are Perfectly Centered */
-.sidebar-wrap .author__avatar,
-.sidebar-wrap .author__content {
-  width: 100%;
-  display: block;
-  text-align: center !important;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .sidebar-wrap .author__avatar,
+  .sidebar-wrap .author__content {
+    width: 100%;
+    display: block;
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-/* Ensure the Image itself doesn't float or align left */
-.sidebar-wrap .author__avatar img {
-  display: block;
-  margin: 0 auto;
-}
+  .sidebar-wrap .author__avatar img {
+    display: block;
+    margin: 0 auto;
+  }
 
 </style>
 
 <div class="sidebar-wrap" itemscope itemtype="http://schema.org/Person">
 
   <div class="author__avatar" style="text-align: center; margin-bottom: 15px;">
-    <img src="{{ base_path }}/images/profile_com.jpg" class="author__avatar hover-lift" alt="{{ author.name }}" fetchpriority="high" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 240px; max-height: 280px; aspect-ratio: 2/3; object-fit: cover; object-position: top;">
+    <img src="{{ base_path }}/images/profile_com.jpg" class="author__avatar hover-lift" alt="{{ author.name }}" fetchpriority="high" width="240" height="360" style="border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); width: 100%; max-width: 240px; height: auto; aspect-ratio: 2/3; object-fit: cover; object-position: top;">
   </div>
 
   <div class="author__content" style="text-align: center; margin-bottom: 25px;">
@@ -231,8 +222,8 @@
       <img src="{{ base_path }}/images/HMS1.jpg" class="affil-logo hover-lift" style="width: 60px;" alt="Harvard Medical School">
       
       {% endcomment %}
-      <img src="{{ base_path }}/images/USD.png" class="affil-logo hover-lift" style="width: 80px;" alt="University of South Dakota">
-      <img src="{{ base_path }}/images/DOE.jpg" class="affil-logo hover-lift" style="width: 180px;" alt="Department of Education">
+      <img src="{{ base_path }}/images/USD.png" class="affil-logo hover-lift" alt="University of South Dakota" width="80" height="51" style="width: 80px; height: auto;">
+      <img src="{{ base_path }}/images/DOE.jpg" class="affil-logo hover-lift" alt="Department of Education" width="180" height="40" style="width: 180px; height: auto;">
     </div>
   </div>
 
@@ -263,6 +254,7 @@
   </div>
 
   {% endcomment %}
+
 
 
 
