@@ -363,3 +363,37 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a,
       display: none;
     }
   }
+
+  /* =========================================================
+   GLOBAL DARK MODE KILL SWITCH
+   Forces the entire site to remain in the Light Theme
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: light !important;
+  }
+  
+  body, html, .page, #main, .page__inner-wrap, .page__content {
+    background-color: #ffffff !important;
+    color: #3b3b3b !important;
+  }
+  
+  /* Force Navbar to be white */
+  .masthead, .masthead__inner-wrap, .greedy-nav {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid #eaeaea !important;
+  }
+  
+  /* Force Navbar links to be dark */
+  .masthead a, .masthead__menu-item a, .site-title, .greedy-nav a {
+    color: #3b3b3b !important;
+    background: transparent !important;
+  }
+  
+  /* Fix the dark gray box around active tabs like "Portfolio" */
+  .greedy-nav .visible-links a:hover,
+  .greedy-nav .visible-links li.masthead__menu-item a:hover {
+    background-color: #f2f2f2 !important;
+  }
+}

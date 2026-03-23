@@ -6,57 +6,19 @@ author_profile: false
 ---
 
 <style>
-  /* 1. Force Light Mode Variables */
-  :root {
-    color-scheme: light !important;
-    --primary-color: #2c3e50;
-    --text-main: #3b3b3b;
-    --text-muted: #64748b;
-    --bg-light: #fdfdfd;
-    --border-light: #eaeaea;
-  }
-
-  /* 2. THE ULTIMATE DARK MODE KILL SWITCH */
-  /* This prevents the theme's Javascript from injecting a dark background */
-  body, 
-  body.dark-theme, 
-  html.dark-theme,
-  .page, 
-  #main, 
-  .page__inner-wrap, 
-  .page__content {
-    background-color: #ffffff !important;
-    color: #3b3b3b !important;
-  }
-  
-  /* Force the top navigation bar to stay light even if the body class changes */
-  .masthead, 
-  .masthead.dark-theme,
-  .greedy-nav {
-    background-color: #ffffff !important;
-    border-bottom: 1px solid #eaeaea !important;
-  }
-  
-  /* Force all header text/links to be dark gray */
-  .masthead a, 
-  .masthead__menu-item a, 
-  .site-title {
-    color: #3b3b3b !important;
-  }
-
-  /* 3. Section Headers */
+  /* 1. Section Headers */
   .portfolio-section-title {
     margin: 40px 0 25px;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #eaeaea;
     padding-bottom: 10px;
     text-transform: uppercase;
-    color: var(--primary-color) !important;
+    color: #2c3e50;
     font-size: 1.1em !important;
     letter-spacing: 0.1em;
     font-weight: 700;
   }
 
-  /* 4. Skills Grid & Categories */
+  /* 2. Skills Grid & Categories */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,9 +30,9 @@ author_profile: false
     font-size: 0.85em;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--text-muted) !important;
+    color: #64748b;
     margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-light);
+    border-bottom: 1px solid #eaeaea;
     padding-bottom: 5px;
     font-weight: 600;
   }
@@ -84,12 +46,12 @@ author_profile: false
   .skill-badge {
     display: flex;
     align-items: center;
-    background-color: var(--bg-light) !important;
-    border: 1px solid var(--border-light) !important;
+    background-color: #fdfdfd;
+    border: 1px solid #eaeaea;
     padding: 5px 12px;
     border-radius: 4px;
     font-size: 0.82em;
-    color: var(--text-main) !important;
+    color: #3b3b3b;
     font-weight: 500;
     transition: all 0.3s ease;
   }
@@ -99,27 +61,26 @@ author_profile: false
     height: 18px;
     margin-right: 10px;
     object-fit: contain;
-    filter: grayscale(100%) opacity(70%) !important;
+    filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
   }
 
   .skill-badge:hover {
     transform: translateY(-2px);
-    border-color: var(--primary-color) !important;
-    color: var(--primary-color) !important;
+    border-color: #2c3e50;
+    color: #2c3e50;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   .skill-badge:hover img, .skill-badge:hover i {
-    filter: grayscale(0%) opacity(100%) !important;
-    color: var(--primary-color) !important;
+    filter: grayscale(0%) opacity(100%);
   }
 
-  /* 5. Project Card Styles */
+  /* 3. Project Card Styles */
   .project-card {
-    background: var(--bg-light) !important;
-    border: 1px solid var(--border-light) !important;
-    border-left: 4px solid var(--primary-color) !important;
+    background: #fdfdfd;
+    border: 1px solid #eaeaea;
+    border-left: 4px solid #2c3e50;
     border-radius: 6px;
     padding: 30px;
     margin-bottom: 30px;
@@ -132,14 +93,14 @@ author_profile: false
 
   .project-title {
     font-size: 1.15em;
-    color: var(--primary-color) !important;
+    color: #2c3e50;
     margin: 0 0 12px 0;
     font-weight: 700;
   }
 
   .project-desc {
     font-size: 0.95em;
-    color: var(--text-main) !important;
+    color: #3b3b3b;
     line-height: 1.75;
     margin-bottom: 20px;
     text-align: justify;
@@ -149,8 +110,8 @@ author_profile: false
     display: inline-flex;
     align-items: center;
     padding: 7px 15px;
-    border: 1px solid var(--primary-color) !important;
-    color: var(--primary-color) !important;
+    border: 1px solid #2c3e50;
+    color: #2c3e50;
     border-radius: 4px;
     font-size: 0.8em;
     font-weight: 600;
@@ -159,15 +120,14 @@ author_profile: false
     text-decoration: none;
     margin-right: 10px;
     transition: all 0.3s ease;
-    background: transparent !important;
   }
 
   .project-btn:hover {
-    background: var(--primary-color) !important;
+    background: #2c3e50;
     color: #ffffff !important;
   }
 
-  /* 6. Combined Responsiveness */
+  /* 4. Combined Responsiveness */
   @media (max-width: 850px) {
     .skills-grid { grid-template-columns: 1fr; gap: 20px; }
     .project-card { padding: 20px; }
