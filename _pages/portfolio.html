@@ -6,6 +6,7 @@ author_profile: false
 ---
 
 <style>
+  /* 1. Light Mode Variables (Permanent) */
   :root {
     --primary-color: #2c3e50;
     --text-main: #3b3b3b;
@@ -14,10 +15,9 @@ author_profile: false
     --border-light: #eaeaea;
   }
 
-  /* Optimized Section Headers */
+  /* 2. Section Headers */
   .portfolio-section-title {
-    margin-top: 40px;
-    margin-bottom: 25px;
+    margin: 40px 0 25px;
     border-bottom: 1px solid var(--border-light);
     padding-bottom: 10px;
     text-transform: uppercase;
@@ -27,28 +27,40 @@ author_profile: false
     font-weight: 700;
   }
 
-  .skill-category { margin-bottom: 35px; }
-  
+  /* 3. Skills Grid & Categories */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns on desktop */
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+
   .skill-category h3 {
-    font-size: 0.9em;
+    font-size: 0.85em;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     color: var(--text-muted);
-    margin-bottom: 15px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 5px;
     font-weight: 600;
   }
 
-  .badge-container { display: flex; flex-wrap: wrap; gap: 10px; }
+  .badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
   .skill-badge {
     display: flex;
     align-items: center;
     background-color: var(--bg-light);
     border: 1px solid var(--border-light);
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: 4px;
-    font-size: 0.88em;
-    color: #555;
+    font-size: 0.82em;
+    color: var(--text-main);
     font-weight: 500;
     transition: all 0.3s ease;
   }
@@ -60,16 +72,13 @@ author_profile: false
     object-fit: contain;
     filter: grayscale(100%) opacity(70%);
     transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .skill-badge:hover {
     transform: translateY(-2px);
     border-color: var(--primary-color);
     color: var(--primary-color);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
   .skill-badge:hover img, .skill-badge:hover i {
@@ -77,7 +86,7 @@ author_profile: false
     color: var(--primary-color);
   }
 
-  /* Project Card Optimization */
+  /* 4. Project Card Styles */
   .project-card {
     background: var(--bg-light);
     border: 1px solid var(--border-light);
@@ -125,55 +134,21 @@ author_profile: false
 
   .project-btn:hover {
     background: var(--primary-color);
-    color: #fff !important;
+    color: #ffffff !important;
   }
 
-  @media (max-width: 768px) {
-    .project-card { padding: 20px; }
-  }
-
-  /* ----------------------------------------- */
-  /* Optimized Compact Skills Grid             */
-  /* ----------------------------------------- */
-  .skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns on desktop */
-    gap: 30px;
-    margin-bottom: 40px;
-  }
-
-  .skill-category { margin-bottom: 0; } /* Remove bottom margin since grid handles it */
-  
-  .skill-category h3 {
-    font-size: 0.85em;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--text-muted);
-    margin-bottom: 12px;
-    border-bottom: 1px solid var(--border-light);
-    padding-bottom: 5px;
-  }
-
-  /* Make badges slightly smaller to save even more space */
-  .skill-badge {
-    padding: 5px 12px;
-    font-size: 0.82em;
-    margin-bottom: 2px;
-  }
-
+  /* 5. Combined Responsiveness */
   @media (max-width: 850px) {
-    .skills-grid {
-      grid-template-columns: 1fr; /* Stack on mobile */
-      gap: 20px;
-    }
+    .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+    .project-card { padding: 20px; }
   }
 </style>
 
-<div class="portfolio-section-title" >Technical Skills</div>
+<div class="portfolio-section-title">Technical Skills</div>
 
 <div class="skills-grid">
   <div>
-    <div class="skill-category" >
+    <div class="skill-category">
       <h3>Programming Languages</h3>
       <div class="badge-container">
         <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</div>
@@ -221,8 +196,6 @@ author_profile: false
   </div>
 </div>
 
-
-
 <div class="portfolio-section-title">Featured Projects</div>
 
 <div class="project-card">
@@ -236,15 +209,14 @@ author_profile: false
     <div class="skill-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-Learn"> Scikit-Learn</div>
     <div class="skill-badge"><i class="fas fa-brain"></i> NLTK</div>
     <div class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"> VS Code</div>
-    
   </div>
 
   <div class="project-links">
     <a href="https://github.com/rez1Sadik/ML_Amazon_reviews/blob/main/Amazon_ML.ipynb" target="_blank" class="project-btn">
-      <i class="fab fa-github"></i>  Repository
+      <i class="fab fa-github"></i> Repository
     </a>
     <a href="{{ base_path }}/files/ABSA_Amazon_Reviews_Hybrid_FE.pdf" target="_blank" class="project-btn">
-      <i class="fas fa-file-alt"></i>  Read Paper
+      <i class="fas fa-file-alt"></i> Read Paper
     </a>
   </div>
 </div>
