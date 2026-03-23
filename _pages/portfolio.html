@@ -6,8 +6,9 @@ author_profile: false
 ---
 
 <style>
-  /* 1. Light Mode Variables (Permanent) */
+  /* 1. Light Mode Variables */
   :root {
+    color-scheme: light !important;
     --primary-color: #2c3e50;
     --text-main: #3b3b3b;
     --text-muted: #64748b;
@@ -15,7 +16,35 @@ author_profile: false
     --border-light: #eaeaea;
   }
 
-  /* 2. Section Headers */
+  /* 2. STRICT LIGHT MODE OVERRIDE (Fights the theme's built-in dark mode) */
+  @media (prefers-color-scheme: dark) {
+    body, html, .page, #main, .page__inner-wrap, .page__content {
+      background-color: #ffffff !important;
+      color: #3b3b3b !important;
+    }
+    
+    /* Force the top navigation bar to stay light */
+    .masthead, .greedy-nav {
+      background-color: #ffffff !important;
+    }
+    .masthead__menu-item a, .site-title {
+      color: #3b3b3b !important;
+    }
+    
+    /* Ensure all text stays dark gray */
+    p, h1, h2, h3, h4, h5, h6, li {
+      color: #3b3b3b !important;
+    }
+    
+    /* Protect our custom portfolio colors */
+    .portfolio-section-title { color: #2c3e50 !important; }
+    .skill-category h3 { color: #64748b !important; }
+    .project-title { color: #2c3e50 !important; }
+    .project-desc { color: #3b3b3b !important; }
+    .project-btn { color: #2c3e50 !important; border-color: #2c3e50 !important; }
+  }
+
+  /* 3. Section Headers */
   .portfolio-section-title {
     margin: 40px 0 25px;
     border-bottom: 1px solid var(--border-light);
@@ -27,7 +56,7 @@ author_profile: false
     font-weight: 700;
   }
 
-  /* 3. Skills Grid & Categories */
+  /* 4. Skills Grid & Categories */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns on desktop */
@@ -86,7 +115,7 @@ author_profile: false
     color: var(--primary-color);
   }
 
-  /* 4. Project Card Styles */
+  /* 5. Project Card Styles */
   .project-card {
     background: var(--bg-light);
     border: 1px solid var(--border-light);
@@ -137,7 +166,7 @@ author_profile: false
     color: #ffffff !important;
   }
 
-  /* 5. Combined Responsiveness */
+  /* 6. Combined Responsiveness */
   @media (max-width: 850px) {
     .skills-grid { grid-template-columns: 1fr; gap: 20px; }
     .project-card { padding: 20px; }
